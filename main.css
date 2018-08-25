@@ -19,9 +19,6 @@ html {
 .pixel-grid {
   display: grid;
   grid-template-columns: var(--grid-square);
-  grid-auto-rows: var(--grid-square);
-  height: 100%;
-  width: 100%;
 }
 
 .pixel,
@@ -30,13 +27,19 @@ html {
   background-color: var(--pixel-background);
   background-size: 100%;
   background-repeat: no-repeat;
+  height: var(--grid-square);
+  width: var(--grid-square);
 }
 
 .pixel-icon:hover { --pixel-background: var(--background); }
 
 .pixel-me { 
+  --grid-square: calc(100vw / 2);
+  /* --pixel-background: transparent; */
   background-image: url('pixelme-transparent.png');
   grid-area: 1 / 2 / span 2 / span 2;
+  width: var(--grid-square);
+  height: var(--grid-square);
 }
 
 .pixel-me:hover { background-image: url('pixelme-shock.png') }
@@ -49,7 +52,6 @@ a:hover { color: darkorange; }
 .pixel-youtube { background-image: url('pixel-youtube-black.png'); }
 .pixel-medium { background-image: url('pixel-medium-black.png'); }
 
-
 .pixel { display: none; }
 
 .about-text {
@@ -61,20 +63,19 @@ p { margin: 0.3em }
 
 @media (min-width: 480px) {
   :root {
-    --grid-square: calc(100vw / 6);
+    --grid-square: calc(95vw / 6);
   }
   
   .pixel-grid {
     grid-auto-rows: var(--grid-square);
     justify-content: center;
-    align-content: center;
     margin-top: 0.5em;
-    /* height: 100%;
-    width: 100%; */
+    height: 100%;
+    width: 100%;
   }
   
   .pixel-me {
-    /* --grid-square: calc(95vw / 3);  */
+    --grid-square: calc(95vw / 3); 
     grid-area: 1 / 5 / span 2 / span 2;
   }
   
