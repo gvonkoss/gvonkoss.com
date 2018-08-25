@@ -1,0 +1,57 @@
+@media (min-width: 900px) {
+  :root { 
+    --grid-columns: 12;
+    --grid-rows: 8
+  }
+  
+  .about-text {
+    grid-area: 5 / 1 / span 3 / -1;
+    align-self: center;
+    border-width: var(--border-width) 0;
+  }
+  
+  .pixel {
+    &-icon { 
+      background-color: var(--background);
+      border: var(--border);
+    } 
+    
+    &-me {
+      grid-area: 2 / 6;
+      border-bottom: 0;
+    }
+    
+    &-twitter {
+      grid-area: -3 / 5;
+      border-width: var(--border-bottom-left);
+    }
+    
+    &-github {
+      grid-area: -3 / 6;
+      border-width: var(--border-bottom);
+    }
+    
+    &-youtube {
+      grid-area: -3 / 7;
+      border-width: var(--border-bottom);
+    }
+    
+    &-medium {
+      grid-area: -3 / 8;
+      border-width: var(--border-bottom-right);
+    }
+    
+    &-1 {
+      background-color: transparent;
+      grid-area: 4 / 5 / span 2 / span 4;
+      border: var(--border);
+      order: 0;
+    }
+    
+    &-2 {
+      background-color: transparent;
+      grid-area: -5 / 4 / span 2 /span 6;
+      border: var(--border);
+    }
+  }
+}

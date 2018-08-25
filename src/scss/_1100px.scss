@@ -1,0 +1,50 @@
+@media (min-width: 1100px) {
+  :root { 
+    --grid-rows: 6;
+  }
+
+  .about-text {
+    grid-area: 4 / 5 / span 6 / span 7;
+    border: var(--border);
+    align-self: flex-start;
+  }
+
+  .pixel {
+    &-icon {
+      border: var(--border);
+      box-sizing: border-box;
+    }
+
+    &-me {
+      grid-area: 4 / 2;
+    }
+
+    &-twitter {
+      grid-area: 2 / 5;
+    }
+
+    &-github {
+      grid-area: 2 / 7;
+    }
+
+    &-youtube {
+      grid-area: 2 / 9;
+    }
+
+    &-medium {
+      grid-area: 2 / -3;
+    }
+
+    &-1 {
+      grid-area: 1 / 1 / span 2 / 4;
+      border-width: var(--border-bottom-right);
+      background-color: var(--background);
+    }
+
+    &-2 {
+      grid-area: 7 / 1 / -1 / 4;
+      border-width: var(--border-top-right);
+      background-color: var(--background);
+    }
+  }
+}
