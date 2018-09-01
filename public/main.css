@@ -16,6 +16,7 @@
   --border-left: 0 var(--border-width) 0 0;
   --border-right: 0 0 0 var(--border-width);
 }
+
 html { height: 100% }
 body {
   margin: 0;
@@ -94,6 +95,7 @@ a:hover { color: white; }
   grid-area: 2 / 4;
   background-image: url('pixel-medium-black.png'); 
 }
+.pixel-medium:hover { background-image: url('pixel-medium-hover.png'); }
 
 @media (min-width: 500px) {
   :root { --grid-columns: 6; --grid-rows: 6 }  
