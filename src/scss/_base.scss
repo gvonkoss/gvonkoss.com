@@ -1,0 +1,72 @@
+.about-text { 
+  grid-column: span 4;
+  padding: 0.5em;
+  border: var(--border);
+  border-width: var(--border-width) 0;
+  background-color: var(--background);
+
+  p { 
+    margin: 0.3em
+  }
+}
+
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), var(--grid-square));
+  min-height: 100vh;
+}
+
+.pixel {
+  display: none;
+  background-color: var(--dark-background);
+  border: var(--border);
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+}
+
+.pixel-me { 
+  --grid-square: calc(100vw / calc(var(--grid-columns) / 2));
+  grid-area: 1 / 2 / span 2 / span 2;
+  background-image: url('../images/pixelme-transparent.png');
+  
+  &:hover {
+    background-image: url('../images/pixelme-shock.png');
+  }
+}
+
+.pixel-twitter { 
+  grid-area: 1 / 1;
+  background-image: url('../images/pixel-twitter-black.png'); 
+  
+  &:hover {
+    background-image: url('../images/pixel-twitter-hover.png');
+  }
+}
+
+.pixel-github { 
+  grid-area: 2 / 1;
+  background-image: url('../images/pixel-github-black.png'); 
+  
+  &:hover {
+    background-image: url('../images/pixel-github-hover.png');
+  }
+}
+
+.pixel-youtube { 
+  grid-area: 1 / 4;
+  background-image: url('../images/pixel-youtube-black.png');
+
+  &:hover {
+    background-image: url('../images/pixel-youtube-hover.png');
+  }
+}
+
+.pixel-medium { 
+  grid-area: 2 / 4;
+  background-image: url('../images/pixel-medium-black.png');
+  
+  &:hover {
+    background-image: url('../images/pixel-medium-hover.png');
+  }
+}

@@ -1,0 +1,48 @@
+@media (min-width: 1250px) {
+  .about-text {
+    grid-area: 2 / 3 / span 6 / span 5;
+    text-align: right;
+    align-self: unset;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+  
+  .pixel {
+    &-me {
+      grid-area: 3 / 8;
+      border-left: 0;
+    }
+
+    &-twitter {
+      grid-area: 5 / 8;
+      border: 0
+    }
+
+    &-github {
+      grid-area: 5 / 9;
+      border-width: var(--border-left);
+    }
+
+    &-youtube {
+      grid-area: 6 / 8;
+      border-width: var(--border-bottom);
+    }
+
+    &-medium {
+      grid-area: 6 / 9;
+      border-width: var(--border-bottom-right);
+    }
+
+    &-1 { 
+      grid-area: 2 / 8 / span 6 / span 3;
+      background-color: transparent;
+      border: var(--border);
+      border-left: 0;
+    }
+
+    &-2 { 
+      display: none
+    }
+  }
+}

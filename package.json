@@ -1,0 +1,13 @@
+{
+  "name": "gvonkoss.com",
+  "version": "1.0.0",
+  "description": "The personal website of Gabrielle von Koss",
+  "scripts": {
+    "build": "node-sass src/scss/ -o assets/css/ --output-style compressed"
+  },
+  "author": "Gabrielle von Koss",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
