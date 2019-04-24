@@ -1,40 +1,40 @@
 .links {
-  align-self: flex-start;
-  grid-column: 2;
-  grid-row: 4;
+	align-self: flex-start;
+	grid-column: 2;
+	grid-row: 4;
 }
 
 a {
-  @include shadow();
-  color: inherit;
-  border: var(--border);
-  background-color: white;
-  display: block;
-  margin: 0 0 20px;
-  padding: 10px;
-  position: relative;
-  text-decoration: none;
+	@include shadow();
+	color: inherit;
+	border: var(--border);
+	background-color: white;
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px;
+	position: relative;
+	text-decoration: none;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 100%;
-    text-align: right;
-    transition: right .3s ease-in-out;
-    background-color: var(--color);
-  }
-  
-  &:hover {
-    color: transparent;
-    &:before {
-      padding: 10px;
-      color: var(--textColor);
-      right: 0;
-    }
-  }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 100%;
+		text-align: right;
+		transition: right .3s ease-in-out;
+		background-color: var(--color);
+	}
+	
+	&:hover {
+		color: transparent;
+		&:before {
+			padding: 10px;
+			color: var(--textColor);
+			right: 0;
+		}
+	}
 }
 
 a[href*="twitter"]:hover:before { content: 'Tweeting' }

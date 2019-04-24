@@ -1,18 +1,18 @@
 .text {
-  @include shadow();
-  align-self: flex-start;
-  background-color: white;
-  border: var(--border);
-  grid-column: 3;
-  grid-row: 4;
-  padding: 20px;
-  position: relative;
+	@include shadow();
+	align-self: flex-start;
+	background-color: white;
+	border: var(--border);
+	grid-column: 3;
+	grid-row: 4 / 5;
+	padding: 20px;
+	position: relative;
 
-  p:first-child {
-    margin-top: 0
-  }
+	p:first-child {
+		margin-top: 0
+	}
 
-  p:last-child {
-    margin-bottom: 0;
-  }
+	p:last-child {
+		margin-bottom: 0;
+	}
 }

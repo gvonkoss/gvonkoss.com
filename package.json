@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "The personal website of Gabrielle von Koss",
   "scripts": {
-    "build": "node-sass src/scss/ -o assets/css/ --output-style compressed"
+    "build": "node-sass src/scss/ -o assets/css/ --output-style compressed",
+    "start": "parcel index.html"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "parcel": "^1.12.3"
   }
 }
