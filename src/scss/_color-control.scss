@@ -1,0 +1,51 @@
+.controls {
+  justify-self: flex-end;
+  grid-area: 2 / 3 / 3 / 3;
+  margin-right: 90px;
+
+  label {
+    @include shadow(5px);
+    background-color: white;
+    border: var(--border);
+    cursor: pointer;
+    display: block;
+    margin: 0 0 8px;
+    padding: 5px;
+    position: relative;
+    width: max-content;
+    float: right;
+    clear: right;
+
+    input {
+      --webkit-appearance: none;
+      border: none;
+      cursor: inherit;
+      padding: 0;
+      margin-left: 5px;
+      height: 24px;
+      width: 24px;
+      vertical-align: top;
+    }
+  }
+}
+
+.buttons {
+  grid-area: 2 / 3 / 3 / 3;
+  justify-self: flex-end;
+  align-self: flex-end;
+
+  button {
+    @include shadow(5px);
+    background-color: white;
+    border: var(--border);
+    color: var(--textColor);
+    font-size: inherit;
+    font-family: inherit;
+    float: left;
+    clear: left;
+    cursor: pointer;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    position: relative;
+  }
+}

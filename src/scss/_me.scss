@@ -1,0 +1,18 @@
+.pixel-me {
+  @include shadow();
+  align-self: flex-end;
+  grid-column: 2;
+  grid-row: 2 / 4;
+  background-image: url('../images/pixelme.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--color);
+  border: var(--border);
+  box-sizing: border-box;
+  justify-self: flex-end;
+  height: 20vw;
+  width: 20vw;
+  max-height: 200px;
+  max-width: 200px;
+  position: relative;
+}

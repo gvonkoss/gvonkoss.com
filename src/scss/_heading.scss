@@ -1,0 +1,13 @@
+.heading {
+  @include shadow();
+  align-self: flex-end;
+  grid-column: 3;
+  grid-row: 3;
+  background-color: white;
+  border: var(--border);
+  padding: 5px 10px;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  width: max-content;
+}
