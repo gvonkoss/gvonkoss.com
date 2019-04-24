@@ -1,27 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
 html { 
   height: 100%
 }
 
 body {
-  margin: 0;
+  color: var(--textColor);
   background: var(--dark-background);
-  font-family: 'VT323', monospace;
-  font-size: 24px;
-  line-height: 1.2;
-  min-height: 100%;
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+  height: 100%;
+  margin: 0;
 }
 
-a { 
-  color: inherit;
-  
-  &:hover {
-    color: white;
+@mixin shadow($spacing: 10px) {
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--outlineColor);
+    top: $spacing;
+    left: $spacing;
+    right: -#{$spacing};
+    bottom: -#{$spacing};
+    z-index: -1;
   }
-}
-
-.pixel-icon {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: var(--grid-square);
-  width: var(--grid-square);
 }
