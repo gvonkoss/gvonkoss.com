@@ -1,15 +1,19 @@
 .text {
-	@include shadow();
+	@include shadow(6px);
 	align-self: flex-start;
 	background-color: white;
 	border: var(--border);
-	grid-column: 3;
-	grid-row: 4 / 5;
+	grid-area: 5 / 2 / 5 / 4;
+	min-width: 250px;
 	padding: 20px;
 	position: relative;
 
+	@media (min-width: 400px) {
+		grid-area: 4 / 3;
+	}
+
 	p:first-child {
-		margin-top: 0
+		margin-top: 0;
 	}
 
 	p:last-child {

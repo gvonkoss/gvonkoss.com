@@ -1,27 +1,42 @@
 .controls {
-	justify-self: flex-end;
-	grid-area: 2 / 3 / 3 / 3;
-	margin-right: 90px;
+	display: none;
+	// justify-self: flex-end;
+	// grid-area: 3 / 2;
+	// // margin-right: 96px;
+	// display: block;
+	// align-self: flex-start;
+
+	// label {
+	// 	display: inline-block;
+	// 	white-space: nowrap;
+	// 	font-size: 16px;
+	// 	line-height: 1.4;
+	// 	margin-right: 4px;
+	// }
+
+	@media (min-width: 400px) {
+		grid-area: 2 / 3;
+	}
 
 	label {
 		@include shadow(5px);
 		background-color: white;
 		border: var(--border);
 		cursor: pointer;
-		display: block;
+		// display: block;
 		margin: 0 0 8px;
-		padding: 5px;
+		padding: 6px;
 		position: relative;
 		width: max-content;
-		float: right;
-		clear: right;
+		// float: right;
+		// clear: right;
 
 		input {
 			--webkit-appearance: none;
 			border: none;
 			cursor: inherit;
 			padding: 0;
-			margin-left: 5px;
+			margin-left: 6px;
 			height: 24px;
 			width: 24px;
 			vertical-align: top;
@@ -30,22 +45,40 @@
 }
 
 .buttons {
-	grid-area: 2 / 3 / 3 / 3;
-	justify-self: flex-end;
-	align-self: flex-end;
+	grid-area: 2 / 3;
+	align-self: center;
+	// display: block;
+	// box-sizing: border-box;
+	// align-self: flex-end;
+	// font-size: 16px;
+	// button {
+	// 	margin-right: 4px;
+	// }
+
+	// @media (min-width: 400px) {
+	// 	grid-area: 2 / 3;
+	// }
 
 	button {
-		@include shadow(5px);
+		@include shadow(6px);
 		background-color: white;
 		border: var(--border);
 		color: var(--textColor);
 		font-size: inherit;
 		font-family: inherit;
-		float: left;
-		clear: left;
+		// float: left;
+		// clear: left;
+		// display: block;
 		cursor: pointer;
-		margin-bottom: 8px;
-		padding: 5px 10px;
+		margin: 0 16px 0 0;
+		padding: 4px 10px;
 		position: relative;
+
+		&:first-of-type {
+			margin-bottom: 8px;
+		}
+		&:last-of-type {
+			margin-top: 8px;
+		}
 	}
 }

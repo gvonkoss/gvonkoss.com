@@ -6,15 +6,18 @@ const changeColors = (root, color, outlineColor, textColor) => {
 	root.setProperty('--textColor', textColor);
 }
 
-const randomize = () => {
-	let hex = `#${Math.floor(Math.random() * 16777215).toString(16)}`; //16777215 is #ffffff
-	return hex === '#ffffff' || hex.length !== 7 ? randomize() : hex;
-};
+const randomize = () => `#${Math.random().toString(16).slice(2, 8)}`;
 
 const original = () => ({
 	highlight: '#aeeedc',
 	outline: '#21d19f',
 	text: '#158666'
+});
+
+const grayscale = () => ({
+	highlight: '#dcdcdc',
+	outline: '#000000',
+	text: '#000000'
 });
 
 const random = () => ({
@@ -42,6 +45,8 @@ this.handleEvent = (e) => {
 		set(original);
 	} else if (e.target.className === 'random') {
 		set(random);
+	} else if (e.target.className === 'grayscale') {
+		set(grayscale);
 	}
 }
 
