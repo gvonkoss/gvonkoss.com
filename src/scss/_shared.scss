@@ -13,7 +13,7 @@ body {
   margin: 0;
 }
 
-@mixin shadow($spacing: 10px) {
+@mixin shadow($spacing: 8px) {
   &::after {
     content: '';
     position: absolute;
