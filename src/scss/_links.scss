@@ -7,30 +7,23 @@
 	grid-column-gap: 20px;
 	grid-row-gap: 10px;
 	width: 100%;
-	// display: block;
-	// @media (min-width: 400px) {
-	// 	grid-area: 4 / 2;
-	// 	a { 
-	// 		display: block;
-	// 		margin-bottom: 8px;
-	// 	}
-	// }
-	
-	// @media (min-width: 800px) {
-	// }
+
+	@include layoutS() {
+		display: block;
+		grid-area: 4 / 2;
+
+		a {
+			display: block;
+			margin-bottom: 8px;
+		}
+	}
 }
 
 a {
 	@include shadow(6px);
 	color: inherit;
-	border: var(--border);
-	background-color: white;
-	// display: inline-block;
-	// display: block;
-	// margin: 0 8px 10px 0;
 	min-width: 38%;
 	padding: 10px;
-	position: relative;
 	text-decoration: none;
 
 	&::before {

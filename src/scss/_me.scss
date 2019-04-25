@@ -6,19 +6,17 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-color: var(--color);
-	border: var(--border);
 	box-sizing: border-box;
 	justify-self: flex-end;
 	height: 36vw;
 	width: 36vw;
 	max-height: 200px;
 	max-width: 200px;
-	position: relative;
 
-	// @media (min-width: 400px) {
-	// 	height: 20vw;
-	// 	width: 20vw;	
-	// 	grid-area: 2 / 2 / 4;
-	// 	justify-self: flex-end;
-	// }
+	@include layoutS() {
+		grid-area: 2 / 2 / 4;
+		justify-self: flex-end;
+		height: 20vw;
+		width: 20vw;	
+	}
 }

@@ -1,84 +1,54 @@
 .controls {
-	display: none;
-	// justify-self: flex-end;
-	// grid-area: 3 / 2;
-	// // margin-right: 96px;
-	// display: block;
-	// align-self: flex-start;
-
-	// label {
-	// 	display: inline-block;
-	// 	white-space: nowrap;
-	// 	font-size: 16px;
-	// 	line-height: 1.4;
-	// 	margin-right: 4px;
-	// }
-
-	@media (min-width: 400px) {
-		grid-area: 2 / 3;
-	}
-
+	grid-area: 2 / 3;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+		
 	label {
 		@include shadow(5px);
-		background-color: white;
-		border: var(--border);
 		cursor: pointer;
-		// display: block;
-		margin: 0 0 8px;
+		display: none;
+		justify-self: flex-end;
 		padding: 6px;
-		position: relative;
 		width: max-content;
-		// float: right;
-		// clear: right;
-
+		
 		input {
 			--webkit-appearance: none;
 			border: none;
 			cursor: inherit;
-			padding: 0;
-			margin-left: 6px;
 			height: 24px;
+			margin-left: 6px;
+			padding: 0;
 			width: 24px;
 			vertical-align: top;
 		}
 	}
-}
 
-.buttons {
-	grid-area: 2 / 3;
-	align-self: center;
-	// display: block;
-	// box-sizing: border-box;
-	// align-self: flex-end;
-	// font-size: 16px;
-	// button {
-	// 	margin-right: 4px;
-	// }
-
-	// @media (min-width: 400px) {
-	// 	grid-area: 2 / 3;
-	// }
-
+	
 	button {
 		@include shadow(6px);
-		background-color: white;
-		border: var(--border);
 		color: var(--textColor);
+		cursor: pointer;
 		font-size: inherit;
 		font-family: inherit;
-		// float: left;
-		// clear: left;
-		// display: block;
-		cursor: pointer;
-		margin: 0 16px 0 0;
 		padding: 4px 10px;
-		position: relative;
+		width: max-content;
+	}
+	
+	#highlight { grid-area: 1 / 1}
+	#outline { grid-area: 2 / 1}
+	#text { grid-area: 3 / 1}
+	#grayscale { grid-area: 1 / 1 }
+	#random { grid-area: 2 / 1 }
+	#reset { grid-area: 3 / 1 }
 
-		&:first-of-type {
-			margin-bottom: 8px;
+	@include layoutS() {
+		label {
+			display: block;
 		}
-		&:last-of-type {
-			margin-top: 8px;
-		}
+
+		#grayscale { grid-area: 1 / 2 }
+		#random { grid-area: 2 / 2 }
+		#reset { grid-area: 3 / 2 }
 	}
 }

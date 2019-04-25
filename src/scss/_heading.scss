@@ -1,20 +1,15 @@
 .heading {
 	@include shadow(6px);
-	// align-self: flex-end;
-	// font-size: 1.75rem;
 	justify-self: center;
 	grid-area: 3 / 2 / 4 / 4;
-	background-color: white;
-	border: var(--border);
 	margin: 0;
 	padding: 5px 10px;
-	position: relative;
 	text-align: center;
 	width: max-content;
 
-	@media (min-width: 400px) {
+	@include layoutS() {
 		grid-area: 3 / 3;
-		font-size: 32px;
-		justify-self: auto;
+		justify-self: flex-start;
+		align-self: flex-end;
 	}
 }

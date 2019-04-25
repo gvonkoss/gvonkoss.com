@@ -1,14 +1,11 @@
 .text {
 	@include shadow(6px);
 	align-self: flex-start;
-	background-color: white;
-	border: var(--border);
 	grid-area: 5 / 2 / 5 / 4;
 	min-width: 250px;
 	padding: 20px;
-	position: relative;
 
-	@media (min-width: 400px) {
+	@include layoutS {
 		grid-area: 4 / 3;
 	}
 

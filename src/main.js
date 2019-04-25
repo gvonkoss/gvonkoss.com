@@ -35,17 +35,17 @@ const set = (newColors) => {
 }
 
 this.handleEvent = (e) => {
-	if (e.target.className === 'text') {
+	if (e.target.id === 'text') {
 		rootStyle.setProperty('--textColor', e.target.value);
-	} else if (e.target.className === 'outline') {
+	} else if (e.target.id === 'outline') {
 		rootStyle.setProperty('--outlineColor', e.target.value);
-	} else if (e.target.className === 'highlight') {
+	} else if (e.target.id === 'highlight') {
 		rootStyle.setProperty('--color', e.target.value);
-	} else if (e.target.className === 'reset') {
+	} else if (e.target.id === 'reset') {
 		set(original);
-	} else if (e.target.className === 'random') {
+	} else if (e.target.id === 'random') {
 		set(random);
-	} else if (e.target.className === 'grayscale') {
+	} else if (e.target.id === 'grayscale') {
 		set(grayscale);
 	}
 }
