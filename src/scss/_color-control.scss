@@ -1,7 +1,9 @@
 .controls {
+	align-self: flex-end;
 	grid-area: 2 / 3;
+
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr auto;
 	grid-gap: 10px;
 		
 	label {
@@ -32,6 +34,7 @@
 		font-size: inherit;
 		font-family: inherit;
 		padding: 4px 10px;
+		max-height: 40px;
 		width: max-content;
 	}
 	

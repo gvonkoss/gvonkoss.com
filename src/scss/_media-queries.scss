@@ -1,0 +1,6 @@
+
+@mixin layoutS() {
+	@media (min-width: 550px) {
+		@content;
+	}
+}
