@@ -1,6 +1,4 @@
 .links {
-	// align-self: flex-start;
-	// justify-self: flex-start;
 	grid-area: 4 / 2 / 4 / 4;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -10,7 +8,7 @@
 
 	@include layoutS() {
 		display: block;
-		grid-area: 4 / 2;
+		grid-area: 3 / 2;
 
 		a {
 			display: block;

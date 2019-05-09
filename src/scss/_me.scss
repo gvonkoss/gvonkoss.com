@@ -14,7 +14,7 @@
 	max-width: 200px;
 
 	@include layoutS() {
-		grid-area: 2 / 2 / 4;
+		grid-area: 2 / 2 / 3;
 		justify-self: flex-end;
 		height: 20vw;
 		width: 20vw;	

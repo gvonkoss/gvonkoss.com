@@ -4,13 +4,13 @@
 	grid-template-rows: repeat(5, auto);
 	grid-gap: 20px;
 
-	height: 100%;
+	min-height: 100vh;
 	background-image: radial-gradient(at center center, var(--outlineColor) 45%, transparent 15%);
 	background-size: 4px 4px;
 	box-sizing: border-box;
-	padding: 10px;
-
+	
 	@include layoutS() {
 		grid-template-columns: 1fr 20% minmax(auto, 65ch) 1fr;
+		padding-bottom: 20px;
 	}
 }

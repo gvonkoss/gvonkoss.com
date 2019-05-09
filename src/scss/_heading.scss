@@ -8,7 +8,7 @@
 	width: max-content;
 
 	@include layoutS() {
-		grid-area: 3 / 3;
+		grid-area: 2 / 3;
 		justify-self: flex-start;
 		align-self: flex-end;
 	}
