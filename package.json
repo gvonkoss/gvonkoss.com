@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "The personal website of Gabrielle von Koss",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "404": "parcel 404.html"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",
