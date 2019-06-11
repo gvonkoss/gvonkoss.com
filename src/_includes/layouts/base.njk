@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>{{ title }}</title>
+
+		<meta name="description" content="{{ site.description }}">
+		<meta name="author" content="{{ site.author }}">
+		{# <meta property="og:url" content="{{ site.url }}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ site.title }}">
+		<meta property="og:description" content="{{ site.description }}">
+		<meta property="og:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ site.title }}">
+		<meta name="twitter:description" content="{{ site.description }}">
+		<meta name="twitter:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png"> #}
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Rubik:700"
+			rel="stylesheet"
+		/>
+		{%- set css -%}
+			{% include "css/main.css" %}
+		{%- endset %}
+		<style>
+			{{ css | cssmin | safe }}
+		</style>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25156125-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-25156125-2');
+		</script>
+	</head>
+	<body class="grid">
+
+		{{ content | safe }}
+
+	</body>
+</html>
