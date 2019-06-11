@@ -1,6 +1,13 @@
 ---
 layout: layouts/base.njk
-description: Tests
 ---
 
-<h1>yolo</h1>
+<h1 class="heading">{{ main.heading }}</h1>
+<div class="pixel-me" aria-labelledby="8bit portrait of Gabrielle von Koss"></div>
+
+{% include 'components/controls.njk' %}
+{% include 'components/links.njk' %}
+
+<div class="text">
+	{{ main.text | safe }}
+</div>
