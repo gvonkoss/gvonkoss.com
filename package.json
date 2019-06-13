@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "The personal website of Gabrielle von Koss",
   "scripts": {
-    "build": "sass --no-cache --sourcemap=none src/scss/main.scss:src/_includes/css/main.css",
+    "build": "sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
     "start": "npm run build && eleventy --serve"
   },
   "author": "Gabrielle von Koss",

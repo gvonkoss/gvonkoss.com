@@ -1,7 +1,7 @@
 .grid {
 	display: grid;
 	grid-template-columns: 1fr repeat(2, auto) 1fr;
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(6, auto);
 	grid-gap: 20px;
 
 	min-height: 100vh;

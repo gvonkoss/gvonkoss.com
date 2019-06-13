@@ -8,7 +8,7 @@
 
 	@include layoutS() {
 		display: block;
-		grid-area: 3 / 2;
+		grid-area: 4 / 2;
 
 		a {
 			display: block;
@@ -23,6 +23,7 @@ a {
 	min-width: 38%;
 	padding: 10px;
 	text-decoration: none;
+	align-self: center;
 
 	&::before {
 		content: '';

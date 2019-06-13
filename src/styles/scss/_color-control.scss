@@ -1,11 +1,11 @@
 .controls {
-	align-self: flex-start;
+	align-self: flex-end;
 	grid-area: 2 / 3;
 
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-gap: 10px;
-		
+
 	label {
 		@include shadow(5px);
 		cursor: pointer;
