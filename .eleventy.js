@@ -1,5 +1,4 @@
 module.exports = (config) => {
-
 	config.addPassthroughCopy('src/images');
 
 	return {

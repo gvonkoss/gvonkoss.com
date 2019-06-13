@@ -1,6 +1,7 @@
 .text {
 	@include shadow(6px);
 	align-self: flex-start;
+	justify-self: flex-start;
 	grid-area: 5 / 2 / 5 / 4;
 	min-width: 250px;
 	padding: 20px;

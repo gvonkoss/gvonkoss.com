@@ -22,14 +22,6 @@
 			href="https://fonts.googleapis.com/css?family=Rubik:700"
 			rel="stylesheet"
 		/>
-		{# {%- set sss -%}
-			{% include "src/scss/main.scss" %}
-		{%- endset %} #}
-
-		{# <style>
-			{{ sass | safe }}
-		</style> #}
-
 		<link rel="shortcut icon" href="{{ '/images/cheese.png' | url }}">
 		<link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25156125-2"></script>
@@ -43,8 +35,16 @@
 	</head>
 	<body class="grid">
 
-		{{ content | safe }}
+		<h1 class="heading">{{ heading }}</h1>
+		<a href="/" class="pixel-me" aria-labelledby="8bit portrait of Gabrielle von Koss"></a>
 
-		<script src="{{ 'script/main.js' | url }}"></script>
+		{% include 'components/controls.njk' %}
+		{% include 'components/links.njk' %}
+
+		<div class="text">
+			{{ content | safe }}
+		</div>
+
+		<script src="{{ '/script/main.js' | url }}"></script>
 	</body>
 </html>
