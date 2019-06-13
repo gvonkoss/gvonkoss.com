@@ -22,12 +22,14 @@
 			href="https://fonts.googleapis.com/css?family=Rubik:700"
 			rel="stylesheet"
 		/>
-		{%- set css -%}
+		{# {%- set css -%}
 			{% include "css/main.css" %}
 		{%- endset %}
 		<style>
 			{{ css | safe }}
-		</style>
+		</style> #}
+		<link rel="shortcut icon" href="{{ '/images/cheese.png' | url }}">
+		<link rel="stylesheet" href="{{ '/css/main.css' | url }}">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25156125-2"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];

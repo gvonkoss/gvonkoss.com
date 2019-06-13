@@ -97,7 +97,7 @@ a[href*="github"]:hover:before {
   position: relative;
   align-self: flex-end;
   grid-area: 2 / 2;
-  background-image: url("../images/pixelme.png");
+  background-image: url("/images/pixelme.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-color: var(--color);
@@ -247,5 +247,3 @@ a[href*="github"]:hover:before {
       grid-area: 2 / 3;
       justify-self: flex-start;
       align-self: flex-end; } }
-
-/*# sourceMappingURL=main.css.map */
