@@ -35,7 +35,7 @@ a {
 		text-decoration: none;
 		align-self: center;
 
-		&::before {
+		&:before {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -56,10 +56,10 @@ a {
 			}
 		}
 	}
-	
+
 	a[href*="twitter"]:hover:before { content: 'Tweeting' }
 	a[href*="medium"]:hover:before { content: 'Writing' }
-	a[href*="youtube"]:hover:before { content: 'Speaking' }
+	a[href*="speaking"]:hover:before { content: 'Speaking' }
 	a[href*="github"]:hover:before { content: 'Coding' }
 }
 

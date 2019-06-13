@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>{{ title }}</title>
+		<title>{{ site.title }}</title>
 
 		<meta name="description" content="{{ site.description }}">
 		<meta name="author" content="{{ site.author }}">
@@ -41,9 +41,7 @@
 		{% include 'components/controls.njk' %}
 		{% include 'components/links.njk' %}
 
-		<div class="text">
-			{{ content | safe }}
-		</div>
+		{{ content | safe }}
 
 		<script src="{{ '/script/main.js' | url }}"></script>
 	</body>

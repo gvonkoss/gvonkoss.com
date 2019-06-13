@@ -4,6 +4,7 @@
 	justify-self: flex-start;
 	grid-area: 5 / 2 / 5 / 4;
 	min-width: 250px;
+	max-width: 560px;
 	padding: 20px;
 
 	@include layoutS {
@@ -16,5 +17,17 @@
 
 	p:last-child {
 		margin-bottom: 0;
+	}
+
+	span {
+		border: var(--border);
+		display: inline-block;
+		padding: 5px 10px;
+	}
+
+	iframe {
+		border: var(--border);
+		box-sizing: border-box;
+		width: 100%;
 	}
 }

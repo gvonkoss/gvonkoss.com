@@ -6,11 +6,20 @@
 	margin: 0;
 	padding: 10px;
 	text-align: center;
-	width: max-content;
-
+	max-width: 520px;
+	
 	@include layoutS() {
 		grid-area: 3 / 3;
 		align-self: flex-end;
 		justify-self: flex-start;
+		width: max-content;
+	}
+}
+
+h3 {
+	margin: 0;
+
+	& + span {
+		margin-bottom: 10px;
 	}
 }

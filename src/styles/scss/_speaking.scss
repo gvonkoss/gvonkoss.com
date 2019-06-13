@@ -1,0 +1,55 @@
+.speaking-list {
+	grid-area: 5 / 2 / 5 / 4;
+	align-self: flex-start;
+	justify-self: flex-start;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	min-width: 250px;
+	max-width: 560px;
+
+	@include layoutS {
+		grid-area: 4 / 3;
+	}
+	
+	.list-item {
+		@include shadow(6px);
+		padding: 10px;
+		margin-bottom: 10px;
+
+		span {
+			display: block;
+		}
+
+		a {
+			font-size: 24px;
+			font-weight: 600;
+			text-decoration: none;
+			display: block;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 100%;
+				right: 0;
+				transition: bottom .3s ease-in-out;
+				background-color: var(--color);
+			}
+			
+			&:hover {
+				cursor: pointer;
+				&:before {
+					bottom: 0;
+					padding: 10px;
+					font-size: 24px;
+					font-weight: 600;
+				}
+			}
+
+			&[href*="js-conf-eu-2018"]:hover:before { content: 'When you assume, you make an error out of you and me'; }
+			&[href*="js-conf-co-2018"]:hover:before { content: 'El error en dar un error por hecho'; }
+		}
+	}
+}

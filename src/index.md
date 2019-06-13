@@ -1,4 +1,0 @@
----
-title: Gabrielle von Koss
-layout: pages/index.njk
----
