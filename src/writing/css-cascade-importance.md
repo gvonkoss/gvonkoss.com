@@ -16,7 +16,7 @@ At its core, importance determines which _declaration block_ the stylesheet will
 
 The value of each selector is predefined by its natural specificity which also establishes the level of importance that a given selector has. And that final importance outranks the given specificity.
 
-.../// gif?
+...
 
 Translation: specificity and importance — despite their respective places in the hierarchy of the cascade — work hand in hand. As a _ruleset_ becomes more specific (as the _selector_ rises in specificity), it also becomes more important. In which case it is fair to wonder why they are even separate concepts.
 

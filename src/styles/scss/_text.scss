@@ -33,7 +33,7 @@
 }
 
 .thing {
-	@include shadow(4px);
+	@include shadow(6px);
 	grid-area: 2 / 3;
 	align-self: flex-end;
 	justify-self: flex-start;
