@@ -4,7 +4,7 @@
 	justify-self: flex-start;
 	grid-area: 5 / 2 / 5 / 4;
 	min-width: 250px;
-	max-width: 560px;
+	// max-width: 560px;
 	padding: 20px;
 
 	@include layoutS {
@@ -19,7 +19,7 @@
 		margin-bottom: 0;
 	}
 
-	span {
+	.location {
 		border: var(--border);
 		display: inline-block;
 		padding: 5px 10px;
@@ -30,4 +30,12 @@
 		box-sizing: border-box;
 		width: 100%;
 	}
+}
+
+.thing {
+	@include shadow(4px);
+	grid-area: 2 / 3;
+	align-self: flex-end;
+	justify-self: flex-start;
+	padding: 5px;
 }

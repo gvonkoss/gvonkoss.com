@@ -1,4 +1,4 @@
-.speaking-list {
+.list {
 	grid-area: 5 / 2 / 5 / 4;
 	align-self: flex-start;
 	justify-self: flex-start;
@@ -6,7 +6,6 @@
 	padding: 0;
 	margin: 0;
 	min-width: 250px;
-	max-width: 560px;
 
 	@include layoutS {
 		grid-area: 4 / 3;
@@ -41,15 +40,13 @@
 			&:hover {
 				cursor: pointer;
 				&:before {
+					content: attr(data-list-item);
 					bottom: 0;
 					padding: 10px;
 					font-size: 24px;
 					font-weight: 600;
 				}
 			}
-
-			&[href*="js-conf-eu-2018"]:hover:before { content: 'When you assume, you make an error out of you and me'; }
-			&[href*="js-conf-co-2018"]:hover:before { content: 'El error en dar un error por hecho'; }
 		}
 	}
 }

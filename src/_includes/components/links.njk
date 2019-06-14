@@ -1,6 +1,10 @@
 <div class="links">
-	<a href="https://twitter.com/gvonkoss">Tweeting</a>
-	<a href="https://medium.com/@frontendium">Writing</a>
-	<a href="/speaking">Speaking</a>
-	<a href="https://github.com/gvonkoss">Coding</a>
+	<a href="https://twitter.com/gvonkoss" data-link-text="Tweeting">Tweeting</a>
+	<a href="/writing" data-link-text="Writing">Writing</a>
+	<a href="/speaking" data-link-text="Speaking">Speaking</a>
+	<a href="https://github.com/gvonkoss" data-link-text="Coding">Coding</a>
+
+	{%if glossary %}
+		{% include 'components/css-glossary.njk' %}
+	{% endif %}
 </div>

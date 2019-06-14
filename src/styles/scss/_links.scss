@@ -50,16 +50,20 @@ a {
 		&:hover {
 			color: transparent;
 			&:before {
+				content: attr(data-link-text);
 				padding: 10px;
 				color: var(--textColor);
 				right: 0;
 			}
 		}
 	}
-
-	a[href*="twitter"]:hover:before { content: 'Tweeting' }
-	a[href*="medium"]:hover:before { content: 'Writing' }
-	a[href*="speaking"]:hover:before { content: 'Speaking' }
-	a[href*="github"]:hover:before { content: 'Coding' }
 }
 
+.glossary {
+	@include shadow(6px);
+	padding: 10px;
+
+	h4 { margin: 0 0 10px }
+
+	pre:last-of-type { margin-bottom: 0;}
+}

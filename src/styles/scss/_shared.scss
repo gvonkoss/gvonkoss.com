@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 html { 
 	min-height: 100%;
@@ -11,6 +12,28 @@ body {
 	font-size: 18px;
 	min-height: 100vh;
 	margin: 0;
+
+	code {
+		background-color: var(--color);
+		font-family: 'Inconsolata', monospace;
+		font-size: 16px;
+		padding: 2px 4px;
+	}
+
+	pre {
+		background-color: var(--color);
+		padding: 10px;
+
+		code {
+			padding: 0;
+		}
+	}
+
+	blockquote {
+		margin: 0;
+		padding-left: 10px;
+		border-left: var(--border);
+	}
 }
 
 @mixin shadow($spacing: 8px) {
