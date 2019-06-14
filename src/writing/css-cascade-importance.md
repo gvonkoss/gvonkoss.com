@@ -1,13 +1,12 @@
 ---
 layout: layouts/blog.njk
 title: 'CSS | The Cascade: Importance'
+description: "Here we'll take an in-depth look at how importance affects our stylesheets"
 date: 2017-11-08
 tags: ['post', 'css', 'importance']
 glossary: true
 ---
-
 <span id="top"></span>
-
 In the world of CSS, the cascade looks like so:
 >Importance > Specificity > Source Order
 

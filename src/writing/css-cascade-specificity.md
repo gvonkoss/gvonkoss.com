@@ -1,6 +1,7 @@
 ---
 layout: layouts/blog.njk
 title: 'CSS | The Cascade: Specificity'
+description: 'This post covers how specificity works in CSS, and some of its unusual behaviour'
 date: 2017-12-13
 tags: ['post', 'css', 'specificity']
 glossary: true

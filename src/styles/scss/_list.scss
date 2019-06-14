@@ -17,14 +17,19 @@
 		margin-bottom: 10px;
 
 		span {
-			display: block;
+			font-size: 16px;
+			float: right;
+		}
+
+		p {
+			margin: 4px 0 0;
+			clear: both;
 		}
 
 		a {
 			font-size: 24px;
 			font-weight: 600;
 			text-decoration: none;
-			display: block;
 
 			&:before {
 				content: '';
