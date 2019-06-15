@@ -18,13 +18,13 @@ The value of each selector is predefined by its natural specificity which also e
 
 ...
 
-Translation: specificity and importance — despite their respective places in the hierarchy of the cascade — work hand in hand. As a _ruleset_ becomes more specific (as the _selector_ rises in specificity), it also becomes more important. In which case it is fair to wonder why they are even separate concepts.
+Translation: specificity and importance — despite their respective places in the hierarchy of the cascade — work hand in hand. As a _ruleset_ becomes more specific (as the selector rises in specificity), it also becomes more important. In which case it is fair to wonder why they are even separate concepts.
 
 Turns out, there’s more to this importance business than meets the eye!
 
 Importance involves some manoeuvring on behalf of the browser. For starters, browsers (user-agents, if you please), have to conform to a minimum number of stylistic features, defined by the CSS specs¹. Examples of that are `<div>` tags, `<a>` tags, `<p>` tags, &c.
 
-Meaning that at the base level, browsers have to be able to display that minimum amount of styling in their default stylesheet. So a simple HTML file opened straight in the browser, will have some styling. Blue underline for links, bold for `<strong>` elements, italics for `<em>` elements, Times New Roman (or similar) as the font family for the `<body>`, so on.
+Meaning that at the base level, browsers have to be able to display that minimum amount of styling in their default stylesheet. This means that any plain HTML file opened straight in the browser will have some styling. Blue underline for links, bold for `<strong>` elements, italics for `<em>` elements, Times New Roman (or similar) as the font family for the `<body>`, so on.
 
 In addition to the default stylesheet, the document’s author (the developer) has sent the browser a stylesheet, and the user of the browser may have ported in their own stylesheet, for any number of reasons (a primary one being accessibility).
 

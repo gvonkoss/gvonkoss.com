@@ -1,20 +1,15 @@
 ---
 layout: layouts/list.njk
-heading: Speaking
+title: Speaking
 ---
 
-<li class="list-item">
-	<a href="/speaking/js-conf-eu-2018"
-		data-list-item="When you assume, you make an error out of you and me">
-			When you assume, you make an error out of you and me
-	</a>
-	<span>JSConf.EU 2018 — English</span>
-</li>
-
-<li class="list-item">
-	<a href="/speaking/js-conf-co-2018"
-		data-list-item="El error en dar un error por hecho">
-			El error en dar un error por hecho
-	</a>
-	<span>JSConf Colombia 2018 — Spanish</span>
-</li>
+{%- for post in collections.conference | reverse -%}
+	<li class="list-item">
+		<a href="{{ post.url }}"
+			data-list-item='{{ post.data.title }}'>
+				{{ post.data.title }}
+		</a>
+		<span>{{ post.data.conference }}</span>
+		<p>{{ post.data.language }}</p>
+	</li>
+{%- endfor -%}
