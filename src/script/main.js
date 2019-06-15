@@ -61,3 +61,10 @@ const buttons = Array.from(document.querySelectorAll('button'), button => {
 });
 
 window.addEventListener('onunload', set(original));
+
+(() => {
+	let page = document.location.pathname.replace(/\//g, '');
+	let link = document.querySelector(`a[href*="${page}"]`);
+
+	link ? link.setAttribute('aria-current', true) : null;
+})();

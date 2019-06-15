@@ -30,6 +30,14 @@
 	&:before {
 		text-align: right;
 	}
+
+	&[aria-current=true] {
+		&:before {
+			right: 0;
+			content: attr(data-text);
+			padding: 10px;
+		}
+	}
 }
 
 .glossary {
