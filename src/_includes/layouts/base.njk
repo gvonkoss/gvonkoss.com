@@ -34,6 +34,15 @@
 		</script>
 	</head>
 	<body class="grid">
+		{% if details %}
+			<div class="details">
+				{% if date %}
+					{{ date | readableDate }}
+				{% elif conference %} 
+					{{ conference }}
+				{% endif %}
+			</div>
+		{% endif %}
 
 		<h1 class="heading">{{ title }}</h1>
 		<a href="/" class="pixel-me" aria-labelledby="8bit portrait of Gabrielle von Koss"></a>
@@ -41,8 +50,13 @@
 		{% include 'components/controls.njk' %}
 		{% include 'components/sidebar.njk' %}
 
-		{{ content | safe }}
-
+		{% if text %}
+			<main>
+				{{ content | safe }}
+			</main>
+		{% else %}
+			{{ content | safe }}
+		{% endif %}
 		<script src="{{ '/script/main.js' | url }}"></script>
 	</body>
 </html>

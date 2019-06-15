@@ -44,6 +44,17 @@ body {
 	}
 }
 
+@mixin mainColumn () {
+	align-self: flex-start;
+	justify-self: flex-start;
+	grid-area: 5 / 2 / 5 / 4;
+	max-width: 650px;
+
+	@include layoutS {
+		grid-area: 4 / 3;
+	}
+}
+
 @mixin shadow($spacing: 8px) {
 	background-color: white;
 	border: var(--border);

@@ -9,7 +9,6 @@ title: Speaking
 			data-text='{{ post.data.title }}'>
 				{{ post.data.title }}
 		</a>
-		<span>{{ post.data.conference }}</span>
-		<p>{{ post.data.language }}</p>
+		<span>{{ post.data.conference }} — {{ post.data.language }}</span>
 	</li>
 {%- endfor -%}

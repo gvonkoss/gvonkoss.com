@@ -1,38 +1,12 @@
-.text {
-	@include shadow(6px);
-	align-self: flex-start;
-	justify-self: flex-start;
-	grid-area: 5 / 2 / 5 / 4;
-	min-width: 250px;
-	// max-width: 560px;
-	padding: 20px;
+// .text {
+// 	.location {
+// 		border: var(--border);
+// 		display: inline-block;
+// 		padding: 5px 10px;
+// 	}
+// }
 
-	@include layoutS {
-		grid-area: 4 / 3;
-	}
-
-	p:first-child {
-		margin-top: 0;
-	}
-
-	p:last-child {
-		margin-bottom: 0;
-	}
-
-	.location {
-		border: var(--border);
-		display: inline-block;
-		padding: 5px 10px;
-	}
-
-	iframe {
-		border: var(--border);
-		box-sizing: border-box;
-		width: 100%;
-	}
-}
-
-.thing {
+.details {
 	@include shadow(6px);
 	grid-area: 2 / 3;
 	align-self: flex-end;

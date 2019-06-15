@@ -1,0 +1,17 @@
+main {
+	@include mainColumn();
+	@include shadow(6px);
+	padding: 20px;
+	min-width: 250px;
+
+	p {
+		&:first-child { margin-top: 0; }
+		&:last-child { margin-bottom: 0; }
+	}
+
+	iframe {
+		border: var(--border);
+		box-sizing: border-box;
+		width: 100%;
+	}
+}
