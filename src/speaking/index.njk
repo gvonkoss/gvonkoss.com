@@ -6,7 +6,7 @@ title: Speaking
 {%- for post in collections.conference | reverse -%}
 	<li class="list-item">
 		<a href="{{ post.url }}"
-			data-list-item='{{ post.data.title }}'>
+			data-text='{{ post.data.title }}'>
 				{{ post.data.title }}
 		</a>
 		<span>{{ post.data.conference }}</span>

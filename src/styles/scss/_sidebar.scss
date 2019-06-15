@@ -1,0 +1,42 @@
+.sidebar {
+	grid-area: 4 / 2 / 4 / 4;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
+	width: 100%;
+
+	@include layoutS() {
+		display: block;
+		grid-area: 4 / 2;
+		align-self: flex-start;
+		position: sticky;
+		top: 10px;
+	}
+}
+
+.sidebar__link {	
+	@include shadow(6px);
+	@include animatedLink('right');
+	align-self: center;
+	min-width: 38%;
+	padding: 10px;
+
+	@include layoutS() {
+		display: block;
+		margin-bottom: 8px;
+	}
+
+	&:before {
+		text-align: right;
+	}
+}
+
+.glossary {
+	@include shadow(6px);
+	padding: 10px;
+
+	h4 { margin: 0 0 10px }
+
+	pre:last-of-type { margin-bottom: 0;}
+}

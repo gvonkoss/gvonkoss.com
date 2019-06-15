@@ -1,0 +1,26 @@
+<div class="sidebar">
+	<a class="sidebar__link" 
+		href="https://github.com/gvonkoss"
+		data-text="Coding">
+			Coding
+	</a>
+	<a class="sidebar__link" 
+		href="/speaking"
+		data-text="Speaking">
+			Speaking
+	</a>
+	<a class="sidebar__link" 
+		href="https://twitter.com/gvonkoss"
+		data-text="Tweeting">
+			Tweeting
+	</a>
+	<a class="sidebar__link" 
+		href="/writing"
+		data-text="Writing">
+			Writing
+	</a>
+
+	{%if glossary %}
+		{% include 'components/css-glossary.njk' %}
+	{% endif %}
+</div>

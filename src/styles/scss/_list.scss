@@ -27,31 +27,9 @@
 		}
 
 		a {
+			@include animatedLink('bottom');
 			font-size: 24px;
 			font-weight: 600;
-			text-decoration: none;
-
-			&:before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 100%;
-				right: 0;
-				transition: bottom .3s ease-in-out;
-				background-color: var(--color);
-			}
-			
-			&:hover {
-				cursor: pointer;
-				&:before {
-					content: attr(data-list-item);
-					bottom: 0;
-					padding: 10px;
-					font-size: 24px;
-					font-weight: 600;
-				}
-			}
 		}
 	}
 }
