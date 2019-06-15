@@ -1,9 +1,14 @@
 .details {
-	@include shadow(6px);
-	grid-area: 2 / 3;
-	align-self: flex-end;
-	justify-self: flex-start;
-	padding: 5px;
+	display:  none;
+
+	@include layoutS () {
+		@include shadow(6px);
+		display: block;
+		grid-area: 2 / 3;
+		align-self: flex-end;
+		justify-self: flex-start;
+		padding: 5px;
+	}
 }
 
 .heading {

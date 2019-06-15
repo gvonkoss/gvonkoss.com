@@ -47,7 +47,7 @@ body {
 @mixin mainColumn () {
 	align-self: flex-start;
 	justify-self: flex-start;
-	grid-area: 5 / 2 / 5 / 4;
+	grid-area: 4 / 2 / auto / 4;
 	max-width: 650px;
 
 	@include layoutS {

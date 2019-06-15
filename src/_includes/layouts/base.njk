@@ -52,6 +52,13 @@
 
 		{% if text %}
 			<main>
+				<div class="details">
+					{% if date %}
+						{{ date | readableDate }}
+					{% elif conference %} 
+						{{ conference }}
+					{% endif %}
+				</div>
 				{{ content | safe }}
 			</main>
 		{% else %}

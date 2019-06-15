@@ -3,9 +3,9 @@ main {
 	@include shadow(6px);
 	padding: 20px;
 	min-width: 250px;
-
+	
 	p {
-		&:first-child { margin-top: 0; }
+		&:first-of-type { margin-top: 0; }
 		&:last-child { margin-bottom: 0; }
 	}
 
@@ -13,5 +13,15 @@ main {
 		border: var(--border);
 		box-sizing: border-box;
 		width: 100%;
+	}
+
+	.details {
+		display: block;
+		font-size: 16px;
+		margin-bottom: 10px;
+
+		@include layoutS() {
+			display: none;
+		}
 	}
 }
