@@ -8,7 +8,6 @@ glossary: 'components/css-glossary.njk'
 text: true
 details: true
 ---
-<span id="top"></span>
 Specificity is a wonderfully powerful, wildly frustrating and weirdly mystical mechanism in the CSS-sphere. With simpler applications and pages that have few elements in the markup, declaring styling can be relatively straight forward. But as the number of elements, classes and ids begins to grow, when you begin including stylistic libraries (or maybe even start working with Sass and its `&` syntax), specificity can begin to get slightly confusing.
 
 For starters, specificity is applied to a _ruleset_ through a _selector_. There is a wide range of selectors, which I'll dive into more deeply another time, but for now we'll be referring to three of them as we use them in CSS-namely an element (e.g. `<div></div>` ), a `.some-class` (defined in markup a `class="some-class"`) and `#some-id` (defined in markup as `id="some-id"`).
@@ -75,7 +74,7 @@ Go forth and style! 💪
 
 <span id="*">*</span>_In this explanation, we’ve excluded inline styles and `!important`, which have higher specificity. An inline style `<div style="background: hotpink"></div>` is generally valued at ‘1000’, but a declaration with the `!important` attribute can be used to trump that. However, the ultimate override is an `!important` inside an inline style, but that’s a dangerous approach. Let’s try and avoid `!important` in general._
 
-_[I’ve talked about importance, too](/writing/css-cascade-importance), if you want to know more. [↑](#top)._
+_[I’ve written about importance, too](/writing/css-cascade-importance), if you want to know more._
 
 #### Resources
 

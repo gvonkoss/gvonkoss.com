@@ -1,4 +1,4 @@
-ul {
+.list {
 	@include mainColumn();
 	list-style: none;
 	padding: 0;
@@ -6,7 +6,7 @@ ul {
 	min-width: 100%;
 }
 	
-li {
+.list-item {
 	@include shadow(6px);
 	padding: 10px;
 	margin-bottom: 10px;
