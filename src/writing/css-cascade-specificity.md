@@ -16,6 +16,7 @@ For starters, specificity is applied to a _ruleset_ through a _selector_. There 
 Specificity is frequently explained as a point system, where an `element` is worth 1, a `.class` worth 10, and an `#id` worth 100[*](#*).
 
 According to that point system, the weight of specificity is placed on selectors based on an ascending value:
+
 <script src="https://gist.github.com/gvonkoss/75cfb447a12d446b36db7072832666cb.js"></script>
 
 Up to here, all well and good. This is a really useful way of understanding how specificity gets determined by your selectors. The higher the total of the selector combinations, the more specific your ruleset and that is how particular styling gets chosen over others. Theoretically, you could link together as many selectors as you can be bothered to type out (as long as they exist in your markup), in order to be precise about the styling you want to apply to a particular element, and to be certain that that is the style that will be applied.
@@ -57,6 +58,7 @@ Cycle through the HTML & the CSS tabs, and then check out the result 🤯.
   Specificity</a> by Gabrielle (<a href="https://codepen.io/gvonkoss">@gvonkoss</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 It turns out that specificity is determined by those points being concatenated. What this means, is that the total values are strung up sequentially, they aren’t _added_ up. So if we drew our point-system table differently, the running total would look more like this:
