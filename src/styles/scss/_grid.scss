@@ -7,6 +7,11 @@
 	min-height: 100vh;
 	background-image: radial-gradient(at center center, var(--outline) 45%, transparent 15%);
 	background-size: 4px 4px;
+
+	@media screen and (prefers-reduced-motion) {
+		background-image: none;
+	}
+
 	box-sizing: border-box;
 	
 	@include layoutS() {
