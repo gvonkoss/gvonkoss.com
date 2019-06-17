@@ -1,16 +1,3 @@
-.details {
-	display:  none;
-
-	@include layoutS () {
-		@include shadow(6px);
-		display: block;
-		grid-area: 2 / 3;
-		align-self: flex-end;
-		justify-self: flex-start;
-		padding: 5px;
-	}
-}
-
 .heading {
 	@include shadow(6px);
 	align-self: center;
@@ -29,10 +16,15 @@
 	}
 }
 
-h3 {
-	margin: 0;
+.details {
+	display:  none;
 
-	& + span {
-		margin-bottom: 10px;
+	@include layoutS () {
+		@include shadow(6px);
+		display: block;
+		grid-area: 2 / 3;
+		align-self: flex-end;
+		justify-self: flex-start;
+		padding: 5px;
 	}
 }
