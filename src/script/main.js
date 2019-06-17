@@ -1,9 +1,9 @@
 const randomize = () => `#${Math.random().toString(16).slice(2, 8)}`;
 
 const original = {
-	highlight: '#aeeedc',
+	highlight: '#d1fff3',
 	outline: '#21d19f',
-	text: '#158666'
+	text: '#0f624b'
 };
 
 const grayscale = {
