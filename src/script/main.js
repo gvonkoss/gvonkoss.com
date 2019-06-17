@@ -1,24 +1,16 @@
-const rootStyle = document.documentElement.style;
-
-const changeColors = (root, color, outlineColor, textColor) => {
-	root.setProperty('--color', color);
-	root.setProperty('--outlineColor', outlineColor);
-	root.setProperty('--textColor', textColor);
-}
-
 const randomize = () => `#${Math.random().toString(16).slice(2, 8)}`;
 
-const original = () => ({
+const original = {
 	highlight: '#aeeedc',
 	outline: '#21d19f',
 	text: '#158666'
-});
+};
 
-const grayscale = () => ({
+const grayscale = {
 	highlight: '#dcdcdc',
 	outline: '#000000',
 	text: '#000000'
-});
+};
 
 const random = () => ({
 	highlight: randomize(),
@@ -26,27 +18,47 @@ const random = () => ({
 	text: randomize()
 });
 
-const set = (newColors) => {
-	let colors = newColors();
-	changeColors(rootStyle, colors.highlight, colors.outline, colors.text);
-	inputs[0].value = colors.highlight;
-	inputs[1].value = colors.outline;
-	inputs[2].value = colors.text;
+const root = document.documentElement.style;
+
+const set = (property, value) => { sessionStorage.setItem(property, value) };
+const get = value => sessionStorage.getItem(value);
+
+const fill = () => {	
+	root.setProperty('--highlight', get('highlight'));
+	root.setProperty('--outline', get('outline'));
+	root.setProperty('--text', get('text'));
+
+	inputs[0].value = get('highlight');
+	inputs[1].value = get('outline');
+	inputs[2].value = get('text');
+}
+
+const setOne = (property, value) => {
+	root.setProperty(`--${property}`, value);
+	set(property, value)
+}
+
+const setAll = (colors) => {
+	set('highlight', colors.highlight);
+	set('outline', colors.outline);
+	set('text', colors.text);
+
+	fill();
 }
 
 this.handleEvent = (e) => {
-	if (e.target.id === 'text') {
-		rootStyle.setProperty('--textColor', e.target.value);
+	if (e.target.id === 'highlight') {
+		setOne('highlight', e.target.value);
 	} else if (e.target.id === 'outline') {
-		rootStyle.setProperty('--outlineColor', e.target.value);
-	} else if (e.target.id === 'highlight') {
-		rootStyle.setProperty('--color', e.target.value);
+		setOne('outline', e.target.value);
+	} else if (e.target.id === 'text') {
+		setOne('text', e.target.value);
 	} else if (e.target.id === 'reset') {
-		set(original);
+		setAll(original)
 	} else if (e.target.id === 'random') {
-		set(random);
+		setAll(random());
 	} else if (e.target.id === 'grayscale') {
-		set(grayscale);
+		setAll(grayscale);
 	}
 }
 
@@ -60,9 +72,9 @@ const buttons = Array.from(document.querySelectorAll('button'), button => {
 	button.addEventListener('click', this);
 });
 
-window.addEventListener('onunload', set(original));
-
 (() => {
+	sessionStorage.length === 0 ? setAll(original) : fill();
+
 	let page = document.location.pathname.replace(/\//g, '');
 	let link = document.querySelector(`a[href*="${page}"]`);
 

@@ -29,7 +29,7 @@
 	
 	button {
 		@include shadow(6px);
-		color: var(--textColor);
+		color: var(--text);
 		cursor: pointer;
 		font-size: inherit;
 		font-family: inherit;

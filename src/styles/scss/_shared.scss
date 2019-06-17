@@ -6,7 +6,7 @@ html {
 }
 
 body {
-	color: var(--textColor);
+	color: var(--text);
 	background: var(--dark-background);
 	font-family: 'Abel', sans-serif;
 	font-size: 18px;
@@ -22,14 +22,14 @@ body {
 	}
 
 	code {
-		background-color: var(--color);
+		background-color: var(--highlight);
 		font-family: 'Inconsolata', monospace;
 		font-size: 16px;
 		padding: 2px 4px;
 	}
 
 	pre {
-		background-color: var(--color);
+		background-color: var(--highlight);
 		padding: 10px;
 		white-space: pre-wrap;
 
@@ -63,7 +63,7 @@ body {
 	&::after {
 		content: '';
 		position: absolute;
-		background-color: var(--outlineColor);
+		background-color: var(--outline);
 		top: $spacing;
 		left: $spacing;
 		right: -#{$spacing};
@@ -83,7 +83,7 @@ body {
 		bottom: set($direction, bottom);
 		left: set($direction, left);
 		transition: #{$direction} 0.3s ease-in-out;
-		background-color: var(--color);
+		background-color: var(--highlight);
 	}
 
 	&:hover:before {
