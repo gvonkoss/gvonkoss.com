@@ -18,7 +18,7 @@ At its core, importance determines which _declaration block_ the stylesheet will
 
 The value of each selector is predefined by its natural specificity which also establishes the level of importance that a given selector has. And that final importance outranks the given specificity.
 
-...
+Uh...
 
 Translation: specificity and importance — despite their respective places in the hierarchy of the cascade — work hand in hand. As a _ruleset_ becomes more specific (as the selector rises in specificity), it also becomes more important. In which case it is fair to wonder why they are even separate concepts.
 
@@ -42,7 +42,7 @@ The browser will parse the stylesheets in the order shown, and then reevaluate t
 
 We can observe its behaviour — along with some specificity action — in this li’l gif:
 
-//giifffff
+<img src="https://cdn-images-1.medium.com/max/800/1*AuSIlweTJc6ZBe9xODU4TQ.gif">
 
 Powerful stuff. Remember to use sparingly.
 
@@ -64,3 +64,6 @@ div {
 There are many factors at play while the outcome of our styling is being processed, but the more we know about it, the better equipped we will be to handle increasingly complex stylesheets.
 
 Go forth and style 💪
+
+#### Resources
+- ¹[CSS 2.1 Conformance Specs](https://www.w3.org/TR/CSS21/conform.html#conformance)
