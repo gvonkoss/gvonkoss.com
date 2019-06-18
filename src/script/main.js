@@ -34,9 +34,8 @@ const fill = () => {
 }
 
 const setOne = (property, value) => {
-	let background = property === 'dotted' || property === 'striped' || property
-
-	if (background) {
+	console.log(property)
+	if ((property === 'dotted' || property === 'striped' || property === 'none')) {
 		value = `var(--${property})`;
 		property = 'background';
 	}
