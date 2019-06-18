@@ -1,12 +1,13 @@
 .heading {
 	@include shadow(6px);
 	align-self: center;
-	justify-self: center;
+	font-family: 'Fira Sans', sans-serif;
 	grid-area: 3 / 2 / 4 / 4;
+	justify-self: center;
 	margin: 0;
+	max-width: 650px;
 	padding: 10px;
 	text-align: center;
-	max-width: 520px;
 	
 	@include layoutS() {
 		grid-area: 3 / 3;

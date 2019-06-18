@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abel');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed:400,400i|Fira+Mono');
 
 html { 
 	min-height: 100%;
@@ -8,7 +7,7 @@ html {
 body {
 	color: var(--text);
 	background: var(--dark-background);
-	font-family: 'Abel', sans-serif;
+	font-family: 'Fira Sans Condensed', sans-serif;
 	font-size: 18px;
 	min-height: 100vh;
 	margin: 0;
@@ -23,7 +22,7 @@ body {
 
 	code {
 		background-color: var(--highlight);
-		font-family: 'Inconsolata', monospace;
+		font-family: 'Fira Mono', monospace;
 		font-size: 16px;
 		padding: 2px 4px;
 	}
