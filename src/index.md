@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 title: Gabrielle von Koss
-width: true
 text: true
 ---
 Hi there 👋 I'm Gabi.
