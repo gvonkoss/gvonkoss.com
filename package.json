@@ -4,7 +4,7 @@
   "description": "The personal website of Gabrielle von Koss",
   "scripts": {
     "build": "sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
-    "start": "npm run build && eleventy --serve"
+    "start": "npm run build && eleventy"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",
