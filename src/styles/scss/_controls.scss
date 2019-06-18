@@ -1,0 +1,103 @@
+.controls {
+	align-self: flex-end;
+	justify-self: flex-start;
+	grid-area: 2 / 3;
+
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	grid-gap: 10px;
+
+	label {
+		@include shadow(5px);
+		cursor: pointer;
+		display: none;
+		justify-self: flex-end;
+		padding: 6px;
+		width: max-content;
+		grid-column: 1;
+	
+		input {
+			--webkit-appearance: none;
+			border: none;
+			cursor: inherit;
+			height: 24px;
+			margin-left: 6px;
+			padding: 0;
+			width: 24px;
+			vertical-align: bottom;
+		}
+	}
+
+	
+	button {
+		@include shadow(6px);
+		color: var(--text);
+		cursor: pointer;
+		font-size: inherit;
+		font-family: inherit;
+		padding: 4px 10px;
+		max-height: 40px;
+		width: max-content;
+
+		grid-column: 3;
+	
+	}
+	
+	.background {
+		@include shadow(6px);
+		box-sizing: border-box;
+		grid-column: 2;
+		padding: 6px;
+
+		&:nth-of-type(1) { 
+			grid-row: 1;
+		}
+
+		&:nth-of-type(2) { 
+			grid-row: 2;
+		}
+
+		&:nth-of-type(3) { 
+			grid-row: 3;
+		}
+
+		button {
+			height: 24px;
+			width: 24px;
+			vertical-align: middle;
+
+		}
+	}
+
+	#dotted {
+		background-image: var(--dotted);
+		background-size: 4px 4px
+	}
+
+	#striped {
+		background-image: var(--striped);
+	}
+
+	#none {
+		background-image: var(--none);
+	}
+	
+	#highlight,
+	#dotted,
+	#grayscale { grid-row: 1 }
+
+	#outline,
+	#striped,
+	#random { grid-row: 2 }
+	
+	#text,
+	#none,
+	#reset { grid-row: 3 }
+
+	@include layoutS() {
+		justify-self: flex-end;
+		label {
+			display: block;
+		}
+	}
+}
