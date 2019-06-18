@@ -1,0 +1,31 @@
+.heading {
+	@include shadow(6px);
+	align-self: center;
+	font-family: 'Fira Sans', sans-serif;
+	grid-area: 3 / 2 / 4 / 4;
+	justify-self: center;
+	margin: 0;
+	max-width: 650px;
+	padding: 10px;
+	text-align: center;
+	
+	@include layoutS() {
+		grid-area: 3 / 3;
+		align-self: flex-end;
+		justify-self: flex-start;
+		width: max-content;
+	}
+}
+
+.details {
+	display:  none;
+
+	@include layoutS () {
+		@include shadow(6px);
+		display: block;
+		grid-area: 2 / 3;
+		align-self: flex-end;
+		justify-self: flex-start;
+		padding: 5px;
+	}
+}
