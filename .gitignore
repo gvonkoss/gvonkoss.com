@@ -1,5 +1,8 @@
-.git/
-/node_modules
-.DS_Store
 .cache/
-dist/
+.DS_Store
+.env
+.git/
+.sass-cache/
+/dist/
+/node_modules/
+package-lock.json

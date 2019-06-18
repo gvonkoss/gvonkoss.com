@@ -1,0 +1,15 @@
+---
+layout: layouts/list.njk
+title: Writing
+---
+
+{%- for post in collections.post | reverse -%}
+	<li class="list-item">
+		<a href="{{ post.url }}"
+			data-text='{{ post.data.title }}'>
+				{{ post.data.title }}
+		</a>
+		<span>{{ post.date | readableDate }}</span>
+		<p>{{ post.data.description }}</p>
+	</li>
+{%- endfor -%}

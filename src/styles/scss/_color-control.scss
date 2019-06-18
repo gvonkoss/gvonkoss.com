@@ -1,11 +1,11 @@
 .controls {
-	align-self: flex-start;
+	align-self: flex-end;
 	grid-area: 2 / 3;
 
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-gap: 10px;
-		
+
 	label {
 		@include shadow(5px);
 		cursor: pointer;
@@ -22,14 +22,14 @@
 			margin-left: 6px;
 			padding: 0;
 			width: 24px;
-			vertical-align: top;
+			vertical-align: bottom;
 		}
 	}
 
 	
 	button {
 		@include shadow(6px);
-		color: var(--textColor);
+		color: var(--text);
 		cursor: pointer;
 		font-size: inherit;
 		font-family: inherit;

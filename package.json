@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "The personal website of Gabrielle von Koss",
   "scripts": {
-    "start": "parcel index.html",
-    "404": "parcel 404.html"
+    "build": "sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
+    "start": "npm run build && eleventy --serve"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",
-  "dependencies": {
-    "node-sass": "^4.9.3",
-    "parcel": "^1.12.3"
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "sass": "^1.21.0"
   }
 }

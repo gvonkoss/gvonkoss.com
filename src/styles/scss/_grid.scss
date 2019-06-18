@@ -1,12 +1,17 @@
 .grid {
 	display: grid;
 	grid-template-columns: 1fr repeat(2, auto) 1fr;
-	grid-template-rows: repeat(5, auto);
+	grid-template-rows: repeat(6, auto);
 	grid-gap: 20px;
 
 	min-height: 100vh;
-	background-image: radial-gradient(at center center, var(--outlineColor) 45%, transparent 15%);
+	background-image: radial-gradient(at center center, var(--outline) 45%, transparent 15%);
 	background-size: 4px 4px;
+
+	@media screen and (prefers-reduced-motion) {
+		background-image: none;
+	}
+
 	box-sizing: border-box;
 	
 	@include layoutS() {
