@@ -10,6 +10,9 @@
 
 	@media screen and (prefers-reduced-motion) {
 		background-image: none;
+		.background {
+			display: none;
+		}
 	}
 
 	box-sizing: border-box;

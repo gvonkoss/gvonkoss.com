@@ -27,13 +27,20 @@ const fill = () => {
 	root.setProperty('--highlight', get('highlight'));
 	root.setProperty('--outline', get('outline'));
 	root.setProperty('--text', get('text'));
-
+	root.setProperty('--background', get('background'))
 	inputs[0].value = get('highlight');
 	inputs[1].value = get('outline');
 	inputs[2].value = get('text');
 }
 
 const setOne = (property, value) => {
+	let background = property === 'dotted' || property === 'striped' || property
+
+	if (background) {
+		value = `var(--${property})`;
+		property = 'background';
+	}
+
 	root.setProperty(`--${property}`, value);
 	set(property, value)
 }
@@ -43,22 +50,22 @@ const setAll = (colors) => {
 	set('outline', colors.outline);
 	set('text', colors.text);
 
+	if(colors.highlight === original.highlight) {
+		set('background', 'var(--dotted)');
+	}
+
 	fill();
 }
 
 this.handleEvent = (e) => {
-	if (e.target.id === 'highlight') {
-		setOne('highlight', e.target.value);
-	} else if (e.target.id === 'outline') {
-		setOne('outline', e.target.value);
-	} else if (e.target.id === 'text') {
-		setOne('text', e.target.value);
-	} else if (e.target.id === 'reset') {
+	if (e.target.id === 'reset') {
 		setAll(original)
 	} else if (e.target.id === 'random') {
 		setAll(random());
 	} else if (e.target.id === 'grayscale') {
 		setAll(grayscale);
+	} else {
+		setOne(e.target.id, e.target.value);
 	}
 }
 
