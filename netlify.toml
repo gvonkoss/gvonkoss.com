@@ -1,6 +1,6 @@
 [build]
 	publish = "dist"
-	command = "npm run build && npm start"
+	command = "eleventy"
 
 [[redirects]]
 	from = "/*"
