@@ -11,7 +11,10 @@ body {
 	font-size: 18px;
 	min-height: 100vh;
 	margin: 0;
-
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	
 	a {
 		color: inherit;
 	
