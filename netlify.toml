@@ -1,0 +1,8 @@
+[build]
+	publish = "dist"
+	command = "eleventy"
+
+[[redirects]]
+	from = "/*"
+	to = "/404/"
+	status = 404

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed:400,400i|Fira+Mono');
+
+html { 
+	min-height: 100%;
+}
+
+body {
+	color: var(--text);
+	background: var(--dark-background);
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-size: 18px;
+	min-height: 100vh;
+	margin: 0;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	
+	a {
+		color: inherit;
+	
+		&:hover {
+			text-decoration-style: double; 
+		}
+	}
+
+	code {
+		background-color: var(--highlight);
+		font-family: 'Fira Mono', monospace;
+		font-size: 16px;
+		padding: 2px 4px;
+	}
+
+	pre {
+		background-color: var(--highlight);
+		padding: 10px;
+		white-space: pre-wrap;
+
+		code {
+			padding: 0;
+		}
+	}
+
+	blockquote {
+		margin: 0;
+		padding-left: 10px;
+		border-left: var(--border);
+	}
+}
+
+@mixin mainColumn () {
+	align-self: flex-start;
+	grid-area: 4 / 2 / auto / 4;
+	max-width: 650px;
+
+	@include layoutS {
+		grid-area: 4 / 3;
+	}
+}
+
+@mixin shadow($spacing: 8px) {
+	background-color: white;
+	border: var(--border);
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-color: var(--outline);
+		top: $spacing;
+		left: $spacing;
+		right: -#{$spacing};
+		bottom: -#{$spacing};
+		z-index: -1;
+	}
+}
+
+@mixin animatedLink($direction) {
+	text-decoration: none;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: set($direction, top);
+		right: set($direction, right);
+		bottom: set($direction, bottom);
+		left: set($direction, left);
+		transition: #{$direction} 0.3s ease-in-out;
+		background-color: var(--highlight);
+	}
+
+	&:hover:before {
+		content: attr(data-text);
+		padding: 10px;
+		#{$direction}: 0;
+	}
+}
+
+@function set($direction, $property) {
+	@return if($property == $direction, 100%, 0);
+}

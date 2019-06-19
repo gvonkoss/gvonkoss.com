@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="{{'es' if language == 'Spanish' else 'en'}}">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>{{ site.title }}</title>
+
+		<meta name="description" content="{{ site.description }}">
+		<meta name="author" content="{{ site.author }}">
+		<meta property="og:url" content="{{ site.url }}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ site.title }}">
+		<meta property="og:description" content="{{ site.description }}">
+		<meta property="og:image" content="images/pixelme.png">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ site.title }}">
+		<meta name="twitter:description" content="{{ site.description }}">
+		<meta name="twitter:image" content="images/pixelme.png">
+		<link rel="shortcut icon" href="{{ '/images/pixelme.png' | url }}">
+		<link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+		{# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25156125-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-25156125-2');
+		</script> #}
+	</head>
+	<body class="grid">
+		<h1 class="heading">{{ title }}</h1>
+
+		{% if details %}
+			<div class="details">
+				{% if date %}
+					{{ date | readableDate }}
+				{% elif conference %} 
+					{{ conference }}
+				{% endif %}
+			</div>
+		{% endif %}
+
+		<a href="/" id="pixel-me" title="Home" aria-label="8bit portrait of Gabrielle von Koss and link to homepage"></a>
+
+		{% include 'components/controls.njk' %}
+
+		{% include 'components/sidebar.njk' %}
+
+		{% if text %}
+			<main>
+				<div class="details">
+					{% if date %}
+						{{ date | readableDate }}
+					{% elif conference %} 
+						{{ conference }}
+					{% endif %}
+				</div>
+				{{ content | safe }}
+			</main>
+		{% else %}
+			{{ content | safe }}
+		{% endif %}
+		<script src="{{ '/script/main.js' | url }}"></script>
+	</body>
+</html>

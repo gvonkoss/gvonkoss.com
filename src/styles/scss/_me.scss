@@ -1,0 +1,26 @@
+#pixel-me {
+	@include shadow(6px);
+	align-self: flex-end;
+	grid-area: 2 / 2;
+	background-image: url('../images/pixelme.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: var(--highlight);
+	box-sizing: border-box;
+	justify-self: flex-end;
+	height: 36vw;
+	width: 36vw;
+	max-height: 200px;
+	max-width: 200px;
+
+	&:hover {
+		background-image: url('../images/pixelme-tongue.png');
+	}
+
+	@include layoutS() {
+		grid-area: 2 / 2 / 4;
+		justify-self: flex-end;
+		height: 20vw;
+		width: 20vw;	
+	}
+}

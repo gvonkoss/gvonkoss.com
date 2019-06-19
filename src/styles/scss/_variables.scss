@@ -1,0 +1,16 @@
+:root {
+  --highlight: #d1fff3;
+  --outline: #21d19f;
+  --text: #0f624b;
+  --border: 2px solid var(--outline);
+  --dotted: radial-gradient(at center center, var(--outline) 45%, transparent 15%);
+  --striped: repeating-linear-gradient(
+      90deg, 
+      var(--outline), 
+      var(--outline) 2px, 
+      transparent 2px, 
+      transparent 12px);
+  --none: none;
+  --background: var(--dotted);
+  --background-size: 4px 4px;
+}

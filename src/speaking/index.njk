@@ -1,0 +1,14 @@
+---
+layout: layouts/list.njk
+title: Speaking
+---
+
+{%- for post in collections.conference | reverse -%}
+	<li class="list-item">
+		<a href="{{ post.url }}"
+			data-text='{{ post.data.title }}'>
+				{{ post.data.title }}
+		</a>
+		<span>{{ post.data.conference }} — {{ post.data.language }}</span>
+	</li>
+{%- endfor -%}
