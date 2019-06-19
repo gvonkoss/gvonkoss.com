@@ -65,7 +65,6 @@
 			height: 24px;
 			width: 24px;
 			vertical-align: middle;
-
 		}
 	}
 
@@ -76,6 +75,7 @@
 
 	#striped {
 		background-image: var(--striped);
+		background-position-x: 13px;
 	}
 
 	#none {

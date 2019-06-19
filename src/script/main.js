@@ -28,16 +28,20 @@ const fill = () => {
 	root.setProperty('--outline', get('outline'));
 	root.setProperty('--text', get('text'));
 	root.setProperty('--background', get('background'))
+	root.setProperty('--background-size', get('size'))
 	inputs[0].value = get('highlight');
 	inputs[1].value = get('outline');
 	inputs[2].value = get('text');
 }
 
 const setOne = (property, value) => {
-	console.log(property)
 	if ((property === 'dotted' || property === 'striped' || property === 'none')) {
 		value = `var(--${property})`;
+		let size = property === 'striped' ? 'none' : '4px 4px';
 		property = 'background';
+
+		root.setProperty('--background-size', size);
+		set('size', size);
 	}
 
 	root.setProperty(`--${property}`, value);
@@ -51,6 +55,7 @@ const setAll = (colors) => {
 
 	if(colors.highlight === original.highlight) {
 		set('background', 'var(--dotted)');
+		set('--background-size', '4px 4px');
 	}
 
 	fill();

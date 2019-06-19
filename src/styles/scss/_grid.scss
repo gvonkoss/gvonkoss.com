@@ -6,12 +6,12 @@
 
 	min-height: 100vh;
 	background-image: var(--background);
-	background-size: 4px 4px;
+	background-size: var(--background-size);
 
 	@media screen and (prefers-reduced-motion) {
-		background-image: none;
+		background-image: var(--none);
 		.background {
-			display: none;
+			display: var(--none);
 		}
 	}
 
