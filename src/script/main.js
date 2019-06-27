@@ -40,8 +40,8 @@ const setOne = (property, value) => {
 		let size = property === 'striped' ? 'none' : '4px 4px';
 		property = 'background';
 
-		root.setProperty('--background-size', size);
 		set('size', size);
+		root.setProperty('--background-size', get('size'));
 	}
 
 	root.setProperty(`--${property}`, value);
@@ -52,10 +52,10 @@ const setAll = (colors) => {
 	set('highlight', colors.highlight);
 	set('outline', colors.outline);
 	set('text', colors.text);
-
+	console.log(colors, original)
 	if(colors.highlight === original.highlight) {
 		set('background', 'var(--dotted)');
-		set('--background-size', '4px 4px');
+		set('size', '4px 4px');
 	}
 
 	fill();
