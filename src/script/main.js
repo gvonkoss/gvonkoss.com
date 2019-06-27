@@ -52,7 +52,7 @@ const setAll = (colors) => {
 	set('highlight', colors.highlight);
 	set('outline', colors.outline);
 	set('text', colors.text);
-	console.log(colors, original)
+
 	if(colors.highlight === original.highlight) {
 		set('background', 'var(--dotted)');
 		set('size', '4px 4px');
