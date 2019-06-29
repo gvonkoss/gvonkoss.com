@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{'es' if language == 'Spanish' else 'en'}}">
+<html lang="{{'es' if language == 'Spanish' else 'en'}}" class="no-js">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,6 +21,13 @@
 		<link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25156125-2"></script>
 		<script>
+			var script = document.createElement('script');
+			var supportsDeferredScripts = "defer" in script && "async" in script;
+			window.ctm = (typeof document.documentElement.dataset === 'object' && ('visibilityState' in document) && supportsDeferredScripts);
+			if (window.ctm) {
+				document.documentElement.classList.remove('no-js');
+			}
+
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
