@@ -16,8 +16,16 @@
 	&:hover {
 		background-image: url('../images/pixelme-tongue.png');
 	}
+}
 
-	@include layoutS() {
+.no-js #pixel-me {
+	grid-area: 2 / 2 / 3 / 4;
+	justify-self: center;
+}
+
+@include layoutS() {
+	.no-js #pixel-me,
+	#pixel-me {
 		grid-area: 2 / 2 / 4;
 		justify-self: flex-end;
 		height: 20vw;
