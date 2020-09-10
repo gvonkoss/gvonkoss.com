@@ -5,8 +5,7 @@
 @use './list';
 @use './me';
 @use './heading';
-
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Fira+Sans+Condensed:400,400i|Fira+Mono');
+@use './fonts' as *;
 
 :root {
 	--highlight: #d1fff3;

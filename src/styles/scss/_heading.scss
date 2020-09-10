@@ -4,7 +4,7 @@
 .heading {
 	@include mixins.shadow();
 	align-self: center;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Fira Sans Condensed', sans-serif;
 	grid-area: 3 / 2 / 4 / 4;
 	justify-self: center;
 	margin: 0;
