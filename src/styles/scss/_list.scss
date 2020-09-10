@@ -1,30 +1,32 @@
+@use './mixins';
+
 .list {
-	@include mainColumn();
+	@include mixins.mainColumn();
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	min-width: 100%;
 }
-	
+
 .list-item {
-	@include shadow(6px);
-	padding: 10px;
-	margin-bottom: 10px;
-	
+	@include mixins.shadow();
+	padding: 0.8rem;
+	margin-bottom: 0.8rem;
+
 	&:last-of-type { margin: 0;}
-	
+
 	span {
 		display: block;
 		font-size: 16px;
-		margin-top: 4px;
+		margin-top: 0.4rem;
 	}
 
 	p {
-		margin: 4px 0 0;
+		margin: 0.4rem 0 0;
 	}
 
 	a {
-		@include animatedLink('bottom');
+		@include mixins.animatedLink('bottom');
 		font-size: 24px;
 		font-family: 'Fira Sans', sans-serif;
 		font-weight: 600;

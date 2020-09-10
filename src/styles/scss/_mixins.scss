@@ -1,0 +1,53 @@
+@use './media-queries';
+
+@mixin mainColumn () {
+	align-self: flex-start;
+	grid-area: 4 / 2 / auto / 4;
+	max-width: 65ch;
+
+	@include media-queries.S {
+		grid-area: 4 / 3;
+	}
+}
+
+@mixin shadow() {
+	background-color: white;
+	border: var(--border);
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		background-color: var(--outline);
+		top: 0.3rem;
+		left: 0.3rem;
+		right: -0.4rem;
+		bottom: -0.4rem;
+		z-index: -1;
+	}
+}
+
+@mixin animatedLink($direction) {
+	text-decoration: none;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: _set($direction, top);
+		right: _set($direction, right);
+		bottom: _set($direction, bottom);
+		left: _set($direction, left);
+		transition: #{$direction} 0.3s ease-in-out;
+		background-color: var(--highlight);
+	}
+
+	&:hover:before {
+		content: attr(data-text);
+		padding: 0.8rem;
+		#{$direction}: 0;
+	}
+}
+
+@function _set($direction, $property) {
+	@return if($property == $direction, 100%, 0);
+}

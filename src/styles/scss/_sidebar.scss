@@ -1,30 +1,32 @@
+@use './mixins';
+@use './media-queries';
+
 .sidebar {
 	grid-area: 5 / 2 / auto / 4;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap: 20px;
-	grid-row-gap: 10px;
+	grid-column-gap: 1rem;
+	grid-row-gap: 0.5rem;
 	width: 100%;
 
-	@include layoutS() {
+	@include media-queries.S() {
 		display: block;
 		grid-area: 4 / 2;
 		align-self: flex-start;
 		position: sticky;
-		top: 10px;
+		top: 0.8rem;
 	}
 }
 
 .sidebar__link {	
-	@include shadow(6px);
-	@include animatedLink('right');
+	@include mixins.shadow();
+	@include mixins.animatedLink('right');
 	align-self: center;
-	min-width: 38%;
-	padding: 10px;
+	padding: 0.8rem;
 
-	@include layoutS() {
+	@include media-queries.S() {
 		display: block;
-		margin-bottom: 8px;
+		margin-bottom: 0.8rem;
 	}
 
 	&:before {
@@ -35,17 +37,17 @@
 		&:before {
 			right: 0;
 			content: attr(data-text);
-			padding: 10px;
+			padding: 0.8rem;
 		}
 	}
 }
 
 .glossary {
-	@include shadow(6px);
-	padding: 10px;
+	@include mixins.shadow();
+	padding: 0.8rem;
 	grid-column: 1 / 3;
 
-	h4 { margin: 0 0 10px }
+	h4 { margin: 0 0 0.8rem }
 
 	pre:last-of-type { margin-bottom: 0;}
 }

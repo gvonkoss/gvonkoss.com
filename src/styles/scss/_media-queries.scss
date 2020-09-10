@@ -1,4 +1,4 @@
-@mixin layoutS() {
+@mixin S () {
 	@media (min-width: 550px) {
 		@content;
 	}

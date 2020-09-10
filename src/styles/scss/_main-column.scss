@@ -1,7 +1,10 @@
+@use './mixins';
+@use './media-queries';
+
 main {
-	@include mainColumn();
-	@include shadow(6px);
-	padding: 20px;
+	@include mixins.mainColumn();
+	@include mixins.shadow();
+	padding: 1rem;
 	min-width: 250px;
 	line-height: 1.6;
 
@@ -23,9 +26,9 @@ main {
 	.details {
 		display: block;
 		font-size: 16px;
-		margin-bottom: 10px;
+		margin-bottom: 0.75rem;
 
-		@include layoutS() {
+		@include media-queries.S() {
 			display: none;
 		}
 	}

@@ -1,8 +1,10 @@
+@use './media-queries';
+
 .grid {
 	display: grid;
 	grid-template-columns: 1fr repeat(2, auto) 1fr;
 	grid-template-rows: repeat(6, auto);
-	grid-gap: 20px;
+	grid-gap: 1.5rem;
 
 	min-height: 100vh;
 	background-image: var(--background);
@@ -10,15 +12,16 @@
 
 	@media screen and (prefers-reduced-motion) {
 		background-image: var(--none);
+
 		.background {
 			display: var(--none);
 		}
 	}
 
 	box-sizing: border-box;
-	
-	@include layoutS() {
+
+	@include media-queries.S() {
 		grid-template-columns: 1fr 20% minmax(auto, 65ch) 1fr;
-		padding-bottom: 20px;
+		padding-bottom: 1rem;
 	}
 }

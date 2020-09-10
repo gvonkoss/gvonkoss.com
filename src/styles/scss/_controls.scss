@@ -1,53 +1,53 @@
+@use './mixins';
+@use './media-queries';
+
 .controls {
 	align-self: flex-end;
 	justify-self: flex-start;
 	grid-area: 2 / 3;
 
 	display: grid;
-	grid-template-columns: 1fr auto auto;
-	grid-gap: 10px;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 0.55rem;
+
+	> * {
+		@include mixins.shadow();
+		cursor: pointer;
+		width: max-content;
+	}
 
 	label {
-		@include shadow(5px);
-		cursor: pointer;
 		display: none;
 		justify-self: flex-end;
-		padding: 6px;
-		width: max-content;
+		padding: 0.35rem;
 		grid-column: 1;
-	
+
 		input {
 			--webkit-appearance: none;
 			border: none;
 			cursor: inherit;
 			height: 24px;
-			margin-left: 6px;
+			margin-left: 0.35rem;
 			padding: 0;
 			width: 24px;
 			vertical-align: bottom;
 		}
 	}
 
-	
 	button {
-		@include shadow(6px);
 		color: var(--text);
-		cursor: pointer;
+		background-color: white;
+		border: var(--border);
 		font-size: inherit;
 		font-family: inherit;
-		padding: 4px 10px;
-		max-height: 40px;
-		width: max-content;
-
+		padding: 0.35rem 0.55rem;
 		grid-column: 3;
-	
 	}
-	
+
 	.background {
-		@include shadow(6px);
 		box-sizing: border-box;
 		grid-column: 2;
-		padding: 6px;
+		padding: 0.35rem;
 
 		&:nth-of-type(1) { 
 			grid-row: 1;
@@ -75,13 +75,19 @@
 
 	#striped {
 		background-image: var(--striped);
-		background-position-x: 13px;
+		background-position-x: 1px;
 	}
 
 	#none {
 		background-image: var(--none);
 	}
-	
+
+	#highlight,
+	#outline,
+	#text {
+		background-color: transparent;
+	}
+
 	#highlight,
 	#dotted,
 	#grayscale { grid-row: 1 }
@@ -94,8 +100,9 @@
 	#none,
 	#reset { grid-row: 3 }
 
-	@include layoutS() {
+	@include media-queries.S() {
 		justify-self: flex-end;
+
 		label {
 			display: block;
 		}

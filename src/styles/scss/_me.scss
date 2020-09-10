@@ -1,5 +1,8 @@
+@use './mixins';
+@use './media-queries';
+
 #pixel-me {
-	@include shadow(6px);
+	@include mixins.shadow();
 	align-self: flex-end;
 	grid-area: 2 / 2;
 	background-image: url('../images/pixelme.png');
@@ -10,8 +13,8 @@
 	justify-self: flex-end;
 	height: 36vw;
 	width: 36vw;
-	max-height: 200px;
-	max-width: 200px;
+	max-height: 11rem;
+	max-width: 11rem;
 
 	&:hover {
 		background-image: url('../images/pixelme-tongue.png');
@@ -23,7 +26,7 @@
 	justify-self: center;
 }
 
-@include layoutS() {
+@include media-queries.S() {
 	.no-js #pixel-me,
 	#pixel-me {
 		grid-area: 2 / 2 / 4;
