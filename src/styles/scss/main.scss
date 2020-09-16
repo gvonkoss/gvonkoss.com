@@ -22,7 +22,8 @@
 			transparent 8px);
 	--none: none;
 	--background: var(--dotted);
-	--background-size: 4px 4px;
+  --font-lg: 20px;
+  --font-md: 16px;
 }
 
 html { 
@@ -33,7 +34,7 @@ body {
 	color: var(--text);
 	background: var(--dark-background);
 	font-family: 'Fira Sans Condensed', sans-serif;
-	font-size: 18px;
+	font-size: var(--font-lg);
 	min-height: 100vh;
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale;
@@ -51,7 +52,7 @@ body {
 	code {
 		background-color: var(--highlight);
 		font-family: 'Fira Mono', monospace;
-		font-size: 16px;
+		font-size: var(--font-md);
 		padding: 2px 4px;
 	}
 

@@ -1,14 +1,19 @@
 @use './media-queries';
 
 .grid {
-	display: grid;
+  display: grid;
+  grid-template-areas:
+    '. me controls .'
+    '. heading heading .'
+    '. content content .'
+    '. sidebar sidebar .';
 	grid-template-columns: 1fr repeat(2, auto) 1fr;
 	grid-template-rows: repeat(6, auto);
 	grid-gap: 1.5rem;
 
 	min-height: 100vh;
 	background-image: var(--background);
-	background-size: var(--background-size);
+	background-size: 4px 4px;
 
 	@media screen and (prefers-reduced-motion) {
 		background-image: var(--none);
@@ -21,6 +26,12 @@
 	box-sizing: border-box;
 
 	@include media-queries.S() {
+    grid-template-areas: 
+      '. . . .'
+      '. me controls .'
+      '. me heading .'
+      '. sidebar content .'
+      '. . . .';
 		grid-template-columns: 1fr 15% minmax(auto, 70ch) 1fr;
 		padding-bottom: 1rem;
 	}

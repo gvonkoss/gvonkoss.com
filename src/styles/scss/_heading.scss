@@ -1,20 +1,11 @@
 @use './mixins';
-@use './media-queries';
 
 .heading {
 	@include mixins.shadow();
-	align-self: center;
 	font-family: 'Fira Sans Condensed', sans-serif;
-	grid-area: 3 / 2 / 4 / 4;
-	justify-self: center;
+	grid-area: heading;
+	justify-self: flex-start;
 	margin: 0;
 	max-width: 65ch;
 	padding: 0.75rem;
-	text-align: left;
-
-	@include media-queries.S() {
-		grid-area: 3 / 3;
-		align-self: flex-end;
-		justify-self: flex-start;
-	}
 }

@@ -23,8 +23,6 @@
     bottom: 6.5rem;
   }
 
-
-
   .about__cv__item {
     margin-bottom: 3rem;
     position: relative;
@@ -66,13 +64,17 @@
 
   .about__cv__item__stack {
     display: flex;
-    margin-bottom: 0.6rem;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    
     span {
       @include mixins.shadow();
+      display: block;
+      font-size: var(--font-md);
       padding: 0.2rem 0.4rem;
       text-transform: uppercase;
-      margin-right: 0.5rem;
-      font-size: 16px;
+      margin: 0 0.6rem 0.6rem 0;
+      white-space: nowrap;
 
       &:last-of-type {
         margin-right: 0;

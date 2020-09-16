@@ -2,7 +2,7 @@
 @use './media-queries';
 
 .sidebar {
-	grid-area: 5 / 2 / auto / 4;
+	grid-area: sidebar;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-column-gap: 1rem;
@@ -11,7 +11,6 @@
 
 	@include media-queries.S() {
 		display: block;
-		grid-area: 4 / 2;
 		align-self: flex-start;
 		position: sticky;
 		top: 0.8rem;

@@ -2,15 +2,20 @@
 @use './media-queries';
 
 .content {
-  @include mixins.mainColumn();
-	min-width: 250px;
-	line-height: 1.6;
+  align-self: flex-start;
+	grid-area: content;
+  min-width: 30ch;
+  line-height: 1.6;
   
   h2,
-  .content--text {
+  &.content--text {
     @include mixins.shadow();
     padding: 1rem;
     margin-top: 0;
+  }
+
+  h2 {
+    display: inline-block;
   }
 
   .details {

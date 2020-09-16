@@ -1,15 +1,5 @@
 @use './media-queries';
 
-@mixin mainColumn () {
-	align-self: flex-start;
-	grid-area: 4 / 2 / auto / 4;
-	max-width: 65ch;
-
-	@include media-queries.S {
-		grid-area: 4 / 3;
-	}
-}
-
 @mixin shadow() {
 	background-color: white;
 	border: var(--border);

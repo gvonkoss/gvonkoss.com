@@ -4,7 +4,7 @@
 .controls {
 	align-self: flex-end;
 	justify-self: flex-start;
-	grid-area: 2 / 3;
+	grid-area: controls;
 
 	display: grid;
 	grid-template-columns: repeat(3, auto);
