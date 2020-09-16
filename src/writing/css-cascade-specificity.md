@@ -1,12 +1,10 @@
 ---
-layout: layouts/base.njk
+layout: layouts/post.njk
 title: 'CSS | The Cascade: Specificity'
 description: 'This post covers how specificity works in CSS, and some of its unusual behaviour'
 date: 2017-12-13
 tags: ['post', 'css', 'specificity']
 glossary: 'components/css-glossary.njk'
-text: true
-details: true
 ---
 Specificity is a wonderfully powerful, wildly frustrating and weirdly mystical mechanism in the CSS-sphere. With simpler applications and pages that have few elements in the markup, declaring styling can be relatively straight forward. But as the number of elements, classes and ids begins to grow, when you begin including stylistic libraries (or maybe even start working with Sass and its `&` syntax), specificity can begin to get slightly confusing.
 

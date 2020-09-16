@@ -10,25 +10,11 @@
 	margin: 0;
 	max-width: 65ch;
 	padding: 0.75rem;
-	text-align: center;
+	text-align: left;
 
 	@include media-queries.S() {
 		grid-area: 3 / 3;
 		align-self: flex-end;
 		justify-self: flex-start;
-		width: max-content;
-	}
-}
-
-.details {
-	display: none;
-
-	@include media-queries.S () {
-		@include mixins.shadow();
-		display: block;
-		grid-area: 2 / 3;
-		align-self: flex-end;
-		justify-self: flex-start;
-		padding: 5px;
 	}
 }

@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+text: true
+---
+
+<em class="details">
+  {% if date %}
+    {{ date | readableDate }}
+  {% elif conference %}
+    {{ conference }}
+  {% endif %}
+</em>
+
+{{ content | safe }}
