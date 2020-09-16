@@ -1,0 +1,24 @@
+---
+layout: layouts/timeline.njk
+title: A little timeline
+---
+
+{%- for post in collections.about | reverse -%}
+	<li class="list-item">
+    <p class="date">{{ post.data.timeline }}</p>
+    <h3>{{ post.data.title }}</h3>
+    <div class="stack">
+      {%- for tech in post.data.stack -%}
+      <span>{{ tech }}</span>
+      {%- endfor -%}
+    </div>
+    <div class="content">
+      {{ post.templateContent | safe}}
+    </div>
+		{# <a href="{{ post.url }}" #}
+			{# data-text='{{ post.data.title }}'> #}
+				
+		{# </a> #}
+		{# <span>{{ post.data.conference }} — {{ post.data.language }}</span> #}
+	</li>
+{%- endfor -%}
