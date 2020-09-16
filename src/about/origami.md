@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 title: Origami - Financial Times
 timeline: Sept '16 - May '19
+location: London, UK
 position: Engineer
 stack: [JavaScript, Sass, Handlebars, NodeJS, CircleCI]
 website: www.origami.ft.com

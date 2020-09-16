@@ -1,4 +1,5 @@
 @use './mixins';
+@use './media-queries';
 
 $_padding: 1rem;
 .content--about {
@@ -28,7 +29,11 @@ $_padding: 1rem;
     position: absolute;
     top: 0;
     left: 0.6rem;
-    bottom: 6.5rem;
+    bottom: 45rem;
+
+    @include media-queries.S() {
+      bottom: 35rem;
+    }
   }
 
   .about__cv__item {
@@ -57,17 +62,20 @@ $_padding: 1rem;
       top: 0.2rem;
       z-index: -1;
     }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .about__cv__item__heading {
     @include mixins.shadow();
+    display: inline-block;
     padding: calc(#{$_padding} / 2) $_padding;
     margin: 0 0 0.6rem;
-    width: max-content;
 
-    h3 {
-      margin: 0 0 0.6rem;
-    }
+    h3 { margin: 0; }
+    a { display: block; }
   }
 
   .about__cv__item__stack {

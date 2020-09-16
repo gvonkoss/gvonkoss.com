@@ -29,10 +29,8 @@
 @include media-queries.S() {
 	.no-js #pixel-me,
 	#pixel-me {
-    // grid-area: 2 / 2 / 4;
-	  // grid-area: me;  
 		justify-self: flex-end;
-		height: 20vw;
-		width: 20vw;	
+		height: 15vw;
+		width: 15vw;	
 	}
 }

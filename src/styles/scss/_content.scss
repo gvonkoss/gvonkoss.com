@@ -6,8 +6,7 @@
 	grid-area: content;
   min-width: 30ch;
   line-height: 1.6;
-  
-  
+
   &.content--text {
     @include mixins.shadow();
     padding: 1rem;

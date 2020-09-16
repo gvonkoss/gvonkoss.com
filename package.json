@@ -6,9 +6,9 @@
     "url": "https://github.com/gvonkoss/gvonkoss.com"
   },
   "scripts": {
-    "build": "npx sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
-    "dev": "npm run build && eleventy",
-    "start": "DEBUG=Eleventy* eleventy --serve"
+    "style": "npx sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
+    "build": "npm run style && eleventy",
+    "dev": "DEBUG=Eleventy* eleventy --serve"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",
