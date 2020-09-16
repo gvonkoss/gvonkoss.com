@@ -21,7 +21,7 @@
 	box-sizing: border-box;
 
 	@include media-queries.S() {
-		grid-template-columns: 1fr 20% minmax(auto, 65ch) 1fr;
+		grid-template-columns: 1fr 15% minmax(auto, 70ch) 1fr;
 		padding-bottom: 1rem;
 	}
 }

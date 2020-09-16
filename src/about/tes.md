@@ -2,12 +2,15 @@
 layout: layouts/base.njk
 title: Times Educational Supplement (Tes)
 timeline: Jan '20 - Present
-stack: [JavaScript, Sass, React, Redux, NodeJS, Jenkins]
-website: https://tes.com/
+position: Engineer
+stack: [JavaScript, Sass, React, Redux, NodeJS, WebPack, Jenkins]
+website: www.tes.com
 tags: [ 'about', 'cv', 'timeline' ]
 text: true
 ---
 
-Bacon ipsum dolor amet porchetta deserunt chislic proident. Turducken ham hock dolor tempor, ribeye mollit short ribs pastrami spare ribs jowl non irure nulla laboris boudin. Qui shankle swine ea aliqua short loin laborum capicola pancetta, hamburger aute quis spare ribs andouille lorem. Reprehenderit ex minim aliquip, shoulder commodo dolore enim aute capicola beef ribs. Andouille in doner labore pork non filet mignon chuck landjaeger. Nulla beef in, do short loin bresaola cupidatat in dolore laborum pancetta officia.
+TES is an education platform that connects teachers with schools around the world. It originally began as a print-based offering, and has transitioned into a digital platform over the last few years.
 
-Pork belly exercitation in, enim ball tip pariatur alcatra consectetur duis occaecat dolor. Occaecat proident velit, shoulder aliqua chuck dolor pork belly andouille magna buffalo fugiat culpa. Prosciutto brisket sed pastrami, esse rump buffalo fugiat laboris kielbasa exercitation in aute tenderloin. Beef ribs filet mignon sausage consectetur sint alcatra est consequat non nisi rump biltong deserunt ham.
+Our team is responsible for the fundamental connection between both parties—advertising positions in schools to teachers. Some time ago the technology powering the website was transformed into a JavaScript stack, from C#. Our work has revolved primarily around moderinizing that change. Our efforts honed in on improving our page performance, SEO, bundle sizes, UI, and accessibility.
+
+That effort has cascaded into other squads across the company, where we strive to make changes to shared components and services that will contribute to similar improvements to other products within the business.
