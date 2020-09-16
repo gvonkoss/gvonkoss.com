@@ -6,9 +6,11 @@
 	min-width: 250px;
 	line-height: 1.6;
   
-  &--text {
+  h2,
+  .content--text {
     @include mixins.shadow();
     padding: 1rem;
+    margin-top: 0;
   }
 
   .details {

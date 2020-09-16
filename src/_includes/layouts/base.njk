@@ -12,21 +12,10 @@
 
 		<h1 class="heading">{{ title }}</h1>
 
-    <main class="content {{ 'content--text' if text }}">
-		{# {% if text %}
-			<main>
-				<div class="details">
-					{% if date %}
-						{{ date | readableDate }}
-					{% elif conference %} 
-						{{ conference }}
-					{% endif %}
-				</div> #}
-				{{ content | safe }}
+    <main class="content{{ ' content--text' if text }}{{ ' content--about' if about}}">
+      {{ content | safe }}
     </main>
-		{# {% else %} #}
-			{# {{ content | safe }} #}
-		{# {% endif %} #}
+
 		<script src="{{ '/assets/script/main.js' | url }}"></script>
 	</body>
 </html>

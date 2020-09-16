@@ -1,10 +1,14 @@
 @use './mixins';
 
-.about {
-  @include mixins.mainColumn();
+.content--about {
+  .about__personal {
+    @include mixins.shadow();
+    padding: 1rem;
+    margin-bottom: 3rem;
+  }
+}
 
-
-.timeline {
+.about__cv {
   list-style: none;
   position: relative;
   margin: 0;
@@ -19,12 +23,9 @@
     bottom: 6.5rem;
   }
 
-  h2 {
-    @include mixins.shadow();
-    padding: 0.8rem;
-  }
 
-  .list-item {
+
+  .about__cv__item {
     margin-bottom: 3rem;
     position: relative;
 
@@ -52,16 +53,7 @@
     }
   }
 
-  .date {
-    @include mixins.shadow();
-    padding: 0.4rem;
-    margin: 0 0 0.6rem;
-    text-transform: uppercase;
-    font-size: 16px;
-    width: max-content;
-  }
-
-  .job {
+  .about__cv__item__heading {
     @include mixins.shadow();
     padding: 0.8rem;
     margin: 0 0 0.6rem;
@@ -72,7 +64,7 @@
     }
   }
 
-  .stack {
+  .about__cv__item__stack {
     display: flex;
     margin-bottom: 0.6rem;
     span {
@@ -88,18 +80,8 @@
     }
   }
 
-  .personal,
-  .content {
+  .about__cv__item__content {
     @include mixins.shadow();
     padding: 0.8rem;
-
-    p {
-      margin-top: 0;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
   }
-
-}}
+}

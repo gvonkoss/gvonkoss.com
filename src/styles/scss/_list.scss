@@ -1,13 +1,13 @@
 @use './mixins';
 
-.list {
+.content__list {
 	@include mixins.mainColumn();
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	min-width: 100%;
 
-  .list-item {
+  .content__list-item {
     @include mixins.shadow();
     padding: 0.8rem;
     margin-bottom: 0.8rem;

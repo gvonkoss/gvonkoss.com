@@ -1,9 +1,10 @@
 ---
-layout: layouts/timeline.njk
+layout: layouts/base.njk
 title: A bit about me
+about: true
 ---
 <h2>Personally</h2>
-<div class="personal">
+<div class="about__personal">
   <p>
     I speak, read and write English, German, Spanish and
     Portuguese. I tried learning Japanese, but can currently
@@ -30,16 +31,16 @@ title: A bit about me
       Eleventy
     </a>.
     It's most obvious feature is the customisability, but behind the scenes it is also sensitive to accessibility preferences like reduced-motion and colour contrast, and reacts to the absence of JavaScript.
-    Our individiual experiences of the web are different, after all.
+    Our individual experiences of the web are different, after all.
   </p>
 
 </div>
 
 <h2>Professionally</h2>
-<ul class="timeline">
+<ul class="about__cv">
   {%- for post in collections.about | reverse -%}
-    <li class="list-item">
-      <div class="job">
+    <li class="about__cv__item">
+      <div class="about__cv__item__heading">
         <h3>
         {{ post.data.position }} @ {{ post.data.title }}
         </h3>
@@ -50,12 +51,12 @@ title: A bit about me
           {{post.data.website}}
         </a>
       </div>
-      <div class="stack">
+      <div class="about__cv__item__stack">
         {%- for tech in post.data.stack -%}
         <span>{{ tech }}</span>
         {%- endfor -%}
       </div>
-      <div class="content">
+      <div class="about__cv__item__content">
         {{ post.templateContent | safe}}
       </div>
     </li>
