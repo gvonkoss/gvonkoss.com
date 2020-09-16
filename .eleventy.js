@@ -1,8 +1,7 @@
 const { DateTime } = require('luxon');
 
 module.exports = (config) => {
-	config.addPassthroughCopy('src/images');
-	config.addPassthroughCopy('src/fonts');
+  config.addPassthroughCopy('src/assets');
 
 	config.addFilter('readableDate', dateObj => {
 		return DateTime.fromJSDate(dateObj, {
