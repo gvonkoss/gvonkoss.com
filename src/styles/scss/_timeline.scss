@@ -1,7 +1,10 @@
 @use './mixins';
 
-.timeline {
+.about {
   @include mixins.mainColumn();
+
+
+.timeline {
   list-style: none;
   position: relative;
   margin: 0;
@@ -14,6 +17,11 @@
     top: 0;
     left: 0.6rem;
     bottom: 6.5rem;
+  }
+
+  h2 {
+    @include mixins.shadow();
+    padding: 0.8rem;
   }
 
   .list-item {
@@ -80,6 +88,7 @@
     }
   }
 
+  .personal,
   .content {
     @include mixins.shadow();
     padding: 0.8rem;
@@ -93,4 +102,4 @@
     }
   }
 
-}
+}}
