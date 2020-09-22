@@ -1,22 +1,20 @@
 @use './media-queries';
 
-@function spacing ($value) {
-  @return 1rem * $value;
-}
+$_offset: 0.4rem;
 
 @mixin shadow() {
-	background-color: white;
-	border: var(--border);
-	position: relative;
+  background-color: white;
+  border: var(--border);
+  position: relative;
 
-	&::after {
-		content: '';
-		position: absolute;
-		background-color: var(--outline);
-		top: 0.3rem;
-		left: 0.3rem;
-		right: -0.4rem;
-		bottom: -0.4rem;
-		z-index: -1;
-	}
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--outline);
+    top: $_offset;
+    left: $_offset;
+    right: -$_offset;
+    bottom: -$_offset;
+    z-index: -1;
+  }
 }

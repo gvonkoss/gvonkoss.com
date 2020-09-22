@@ -1,7 +1,7 @@
 @use './mixins';
 @use './media-queries';
 
-$_spacing: 1rem;
+$_spacing: 0.8rem;
 
 .content--about {
   h2 {
@@ -13,8 +13,8 @@ $_spacing: 1rem;
 
   .content--about__personal {
     @include mixins.shadow();
-    padding: mixins.spacing(1);
-    margin-bottom: mixins.spacing(3);
+    padding: $_spacing;
+    margin-bottom: 3rem;
   }
 }
 
@@ -27,8 +27,8 @@ $_spacing: 1rem;
       cursor: pointer;
       display: flex;
       flex-wrap: wrap;
-      padding: mixins.spacing(0.5) mixins.spacing(0.8);
-      margin: 0 0 mixins.spacing(0.8);
+      padding: 0.5rem $_spacing;
+      margin: 0 0 $_spacing;
 
       &::marker { content: '' };
 
@@ -38,12 +38,12 @@ $_spacing: 1rem;
         border: var(--border);
         border-top: 0;
         border-left: 0;
-        height: mixins.spacing(1);
-        width: mixins.spacing(1);
+        height: 1rem;
+        width: 1rem;
         transform: rotate(45deg);
         position: absolute;
-        right: mixins.spacing(1);
-        bottom: mixins.spacing(1);
+        right: 1rem;
+        bottom: 1rem;
         transition: all .3s ease;
 
         @media screen and (prefers-reduced-motion) {
@@ -52,17 +52,17 @@ $_spacing: 1rem;
       }
 
       h3 {
-        margin: 0 0 mixins.spacing(0.4);
+        margin: 0 0 0.5rem;
         flex: 0 0 100%;
       }
 
-      a { margin-left: mixins.spacing(0.6) };
+      a { margin-left: 0.6rem };
     }
 
     &[open] {
       summary:before {
         transform: rotate(-135deg);
-        bottom: mixins.spacing(0.5);
+        bottom: 0.5rem;
       }
     }
   }
@@ -78,8 +78,8 @@ $_spacing: 1rem;
       li {
         @include mixins.shadow();
         font-size: var(--font-md);
-        margin: 0 mixins.spacing(0.5) mixins.spacing(0.8) 0;
-        padding: mixins.spacing(0.2) mixins.spacing(0.5);
+        margin: 0 0.5rem $_spacing 0;
+        padding: 0.2rem 0.5rem;
         text-transform: uppercase;
         white-space: nowrap;
       }
@@ -87,7 +87,7 @@ $_spacing: 1rem;
 
     div {
       @include mixins.shadow();
-      padding: mixins.spacing(0.5) mixins.spacing(0.8);
+      padding: 0.5rem $_spacing;
     }
   }
 }

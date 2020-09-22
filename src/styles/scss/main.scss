@@ -8,6 +8,8 @@
 @use './me';
 @use './sidebar';
 
+$_spacing: 0.8rem;
+
 :root {
 	--highlight: #d1fff3;
 	--outline: #21d19f;
@@ -52,12 +54,12 @@ body {
 		background-color: var(--highlight);
 		font-family: 'Fira Mono', monospace;
 		font-size: var(--font-md);
-		padding: 2px 4px;
+		padding: 0.2rem 0.3rem;
 	}
 
 	pre {
 		background-color: var(--highlight);
-		padding: 10px;
+		padding: $_spacing;
 		white-space: pre-wrap;
 
 		code {
@@ -67,7 +69,7 @@ body {
 
 	blockquote {
 		margin: 0;
-		padding-left: 10px;
+		padding-left: $_spacing;
 		border-left: var(--border);
 	}
 }

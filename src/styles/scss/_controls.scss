@@ -2,114 +2,114 @@
 @use './media-queries';
 
 .controls {
-	align-self: flex-end;
-	justify-self: flex-start;
-	grid-area: controls;
+  align-self: flex-end;
+  justify-self: flex-start;
+  grid-area: controls;
 
-	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-gap: 0.55rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 0.5rem;
 
-	> * {
-		@include mixins.shadow();
-		cursor: pointer;
-		width: max-content;
-	}
+  > * {
+    @include mixins.shadow();
+    cursor: pointer;
+    width: max-content;
+  }
 
-	label {
-		display: none;
-		justify-self: flex-end;
-		padding: 0.35rem;
-		grid-column: 1;
+  label {
+    display: none;
+    justify-self: flex-end;
+    padding: 0.35rem;
+    grid-column: 1;
 
-		input {
-			--webkit-appearance: none;
-			border: none;
-			cursor: inherit;
-			height: 24px;
-			margin-left: 0.35rem;
-			padding: 0;
-			width: 24px;
-			vertical-align: bottom;
-		}
-	}
+    input {
+      --webkit-appearance: none;
+      border: none;
+      cursor: inherit;
+      height: 24px;
+      margin-left: 0.35rem;
+      padding: 0;
+      width: 24px;
+      vertical-align: bottom;
+    }
+  }
 
-	button {
-		color: var(--text);
-		background-color: white;
-		border: var(--border);
-		font-size: inherit;
-		font-family: inherit;
-		padding: 0.35rem 0.55rem;
-		grid-column: 3;
-	}
+  button {
+    color: var(--text);
+    background-color: white;
+    border: var(--border);
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0.35rem 0.55rem;
+    grid-column: 3;
+  }
 
-	.background {
-		box-sizing: border-box;
-		grid-column: 2;
-		padding: 0.35rem;
+  .background {
+    box-sizing: border-box;
+    grid-column: 2;
+    padding: 0.35rem;
 
-		&:nth-of-type(1) { 
-			grid-row: 1;
-		}
+    &:nth-of-type(1) {
+      grid-row: 1;
+    }
 
-		&:nth-of-type(2) { 
-			grid-row: 2;
-		}
+    &:nth-of-type(2) {
+      grid-row: 2;
+    }
 
-		&:nth-of-type(3) { 
-			grid-row: 3;
-		}
+    &:nth-of-type(3) {
+      grid-row: 3;
+    }
 
-		button {
-			height: 24px;
-			width: 24px;
-			vertical-align: middle;
-		}
-	}
+    button {
+      height: 24px;
+      width: 24px;
+      vertical-align: middle;
+    }
+  }
 
-	#dotted {
-		background-image: var(--dotted);
-		background-size: 4px 4px;
-	}
+  #dotted {
+    background-image: var(--dotted);
+    background-size: 4px 4px;
+  }
 
-	#striped {
-		background-image: var(--striped);
-		background-position-x: 9px;
-		background-size: 4px;
-	}
+  #striped {
+    background-image: var(--striped);
+    background-position-x: 9px;
+    background-size: 4px;
+  }
 
-	#none {
-		background-image: none;
-	}
+  #none {
+    background-image: none;
+  }
 
-	#highlight,
-	#outline,
-	#text {
-		background-color: transparent;
-	}
+  #highlight,
+  #outline,
+  #text {
+    background-color: transparent;
+  }
 
-	#highlight,
-	#dotted,
-	#grayscale { grid-row: 1 }
+  #highlight,
+  #dotted,
+  #grayscale { grid-row: 1 }
 
-	#outline,
-	#striped,
-	#random { grid-row: 2 }
-	
-	#text,
-	#none,
-	#reset { grid-row: 3 }
+  #outline,
+  #striped,
+  #random { grid-row: 2 }
 
-	@include media-queries.S() {
-		justify-self: flex-end;
+  #text,
+  #none,
+  #reset { grid-row: 3 }
 
-		label {
-			display: block;
-		}
-	}
+  @include media-queries.fromM() {
+    justify-self: flex-end;
+
+    label {
+      display: block;
+    }
+  }
 }
 
 .no-js .controls {
-	display: none !important; 
+  display: none !important;
 }

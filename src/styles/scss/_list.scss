@@ -4,15 +4,15 @@
   list-style: none;
   position: relative;
   margin: 0;
-  padding-left: mixins.spacing(2);
+  padding-left: 2rem;
 
   &:before {
     content: '';
     border: var(--border);
     position: absolute;
-    top: mixins.spacing(0.5);
-    left: mixins.spacing(0.6);
-    bottom: mixins.spacing(-1);
+    top: 0.5rem;
+    left: 0.6rem;
+    bottom: -1rem;
   }
 
   &:after {
@@ -20,11 +20,11 @@
     border: 3px solid var(--outline);
     border-top: 0;
     border-left: 0;
-    height: mixins.spacing(1);
-    width: mixins.spacing(1);
+    height: 1rem;
+    width: 1rem;
     position: absolute;
-    left: mixins.spacing(0.1);
-    bottom: mixins.spacing(-1);
+    left: 0.1rem;
+    bottom: -1rem;
     transform: rotate(45deg)
   }
 }
@@ -38,11 +38,11 @@
     background-color: var(--highlight);
     border: var(--border);
     display: inline-block;
-    height: mixins.spacing(1);
-    width: mixins.spacing(1);
+    height: 1rem;
+    width: 1rem;
     position: absolute;
     top: 0rem;
-    left: mixins.spacing(-2);
+    left: -2rem;
   }
 
   &::after {
@@ -50,10 +50,10 @@
     display: inline-block;
     position: absolute;
     background-color: var(--outline);
-    height: mixins.spacing(1.2);
-    width: mixins.spacing(1.2);
-    left: mixins.spacing(-1.8);
-    top: mixins.spacing(0.2);
+    height: 1.2rem;
+    width: 1.2rem;
+    left: -1.8rem;
+    top: 0.2rem;
     z-index: -1;
   }
 
@@ -65,10 +65,10 @@
 .content__list--post {
   .content__list__item div {
     @include mixins.shadow();
-    padding: mixins.spacing(1);
+    padding: 0.8rem;
 
     h2 {
-      margin: 0 0 mixins.spacing(0.5);
+      margin: 0 0 0.5rem;
       line-height: 1.2;
     }
   }

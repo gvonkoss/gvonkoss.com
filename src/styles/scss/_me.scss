@@ -1,36 +1,41 @@
 @use './mixins';
 @use './media-queries';
 
-#pixel-me {
-	@include mixins.shadow();
-	align-self: flex-end;
-	grid-area: me;
-	background-image: url('../assets/images/pixelme.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-color: var(--highlight);
-	box-sizing: border-box;
-	justify-self: flex-end;
-	height: 36vw;
-	width: 36vw;
-	max-height: 11rem;
-	max-width: 11rem;
+$_icon-size: 15vw;
 
-	&:hover {
-		background-image: url('../assets/images/pixelme-tongue.png');
-	}
+#pixel-me {
+  @include mixins.shadow();
+  align-self: flex-end;
+  grid-area: me;
+  background-image: url('../assets/images/pixelme.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--highlight);
+  box-sizing: border-box;
+  justify-self: flex-end;
+  height: $_icon-size * 2;
+  width: $_icon-size * 2;
+  max-height: 10rem;
+  max-width: 10rem;
+
+  &:hover {
+    background-image: url('../assets/images/pixelme-tongue.png');
+  }
 }
 
 .no-js #pixel-me {
-	grid-area: 2 / 2 / 3 / 4;
-	justify-self: center;
+  grid-area: 2 / 2 / 3 / 4;
+  justify-self: center;
 }
 
-@include media-queries.S() {
-	.no-js #pixel-me,
-	#pixel-me {
-		justify-self: flex-end;
-		height: 15vw;
-		width: 15vw;	
-	}
+@include media-queries.fromM() {
+  .no-js #pixel-me,
+  #pixel-me {
+    justify-self: flex-end;
+    height: $_icon-size;
+    width: $_icon-size;
+    max-height: 12rem;
+    max-width: 12rem;
+
+  }
 }

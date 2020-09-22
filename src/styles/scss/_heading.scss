@@ -1,12 +1,12 @@
 @use './mixins';
 
 .heading {
-	@include mixins.shadow();
-	font-family: 'Fira Sans Condensed', sans-serif;
+  @include mixins.shadow();
+  font-family: 'Fira Sans Condensed', sans-serif;
   grid-area: heading;
   align-self: flex-end;
-	justify-self: flex-start;
-	margin: 0;
-	max-width: 65ch;
-	padding: 0.75rem;
+  justify-self: flex-start;
+  margin: 0;
+  max-width: 65ch;
+  padding: 0.8rem;
 }

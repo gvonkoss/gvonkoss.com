@@ -1,5 +1,5 @@
-@mixin S () {
-	@media (min-width: 680px) {
-		@content;
-	}
-}
+@mixin fromM () {
+  @media (min-width: 720px) {
+    @content;
+  }
+};
