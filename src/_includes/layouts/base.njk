@@ -3,19 +3,19 @@
 
   {% include 'components/head.njk'%}
 
-	<body class="grid">
+  <body class="grid">
     {% include 'components/controls.njk' %}
 
-		<a href="/" id="pixel-me" title="Home" aria-label="8bit portrait of Gabrielle von Koss and link to homepage"></a>
+    <a href="/" id="pixel-me" title="Home" aria-label="8bit portrait of Gabrielle von Koss and link to homepage"></a>
 
-		{% include 'components/sidebar.njk' %}
+    {% include 'components/sidebar.njk' %}
 
-		<h1 class="heading">{{ title }}</h1>
+    <h1 class="heading">{{ title }}</h1>
 
     <main class="content{{ ' content--text' if text }}{{ ' content--about' if about}}">
       {{ content | safe }}
     </main>
 
-		<script src="{{ '/assets/scripts/main.js' | url }}"></script>
-	</body>
+    <script src="{{ '/assets/scripts/main.js' | url }}"></script>
+  </body>
 </html>

@@ -19,7 +19,6 @@ $_spacing: 1rem;
 }
 
 .content__list--about {
-
   .content__list__item__details {
     position: relative;
 
@@ -46,6 +45,10 @@ $_spacing: 1rem;
         right: mixins.spacing(1);
         bottom: mixins.spacing(1);
         transition: all .3s ease;
+
+        @media screen and (prefers-reduced-motion) {
+          transition: none;
+        }
       }
 
       h3 {

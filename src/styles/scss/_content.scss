@@ -3,7 +3,7 @@
 
 .content {
   align-self: flex-start;
-	grid-area: content;
+  grid-area: content;
   min-width: 30ch;
   line-height: 1.6;
 
@@ -17,18 +17,18 @@
     margin-bottom: 0.8rem;
   }
 
-	p {
-		&:first-of-type { margin-top: 0; }
-		&:last-child { margin-bottom: 0; }
-	}
+  p {
+    &:first-of-type { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+  }
 
-	iframe {
-		border: var(--border);
-		box-sizing: border-box;
-		width: 100%;
-	}
+  iframe {
+    border: var(--border);
+    box-sizing: border-box;
+    width: 100%;
+  }
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }

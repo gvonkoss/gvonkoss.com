@@ -20,28 +20,3 @@
 		z-index: -1;
 	}
 }
-
-@mixin animatedLink($direction) {
-	text-decoration: none;
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: _set($direction, top);
-		right: _set($direction, right);
-		bottom: _set($direction, bottom);
-		left: _set($direction, left);
-		transition: #{$direction} 0.3s ease-in-out;
-		background-color: var(--highlight);
-	}
-
-	&:hover:before {
-		content: attr(data-text);
-		padding: 0.8rem;
-		#{$direction}: 0;
-	}
-}
-
-@function _set($direction, $property) {
-	@return if($property == $direction, 100%, 0);
-}
