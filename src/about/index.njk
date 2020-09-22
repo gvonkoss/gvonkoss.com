@@ -4,7 +4,7 @@ title: About me
 about: true
 ---
 <h2>Personally</h2>
-<div class="about__personal">
+<div class="content--about__personal">
   <p>
     I speak, read and write English, German, Spanish and
     Portuguese. I tried learning Japanese, but can currently
@@ -36,10 +36,11 @@ about: true
 </div>
 
 <h2>Professionally</h2>
-<ul class="about__cv">
+<ul class="content__list content__list--about">
   {%- for post in collections.about | reverse -%}
-    <li class="about__cv__item">
-      <div class="about__cv__item__heading">
+    <li class="content__list__item">
+    <details class="content__list__item__details">
+      <summary>
         <h3>
         {{ post.data.position }} @ {{ post.data.title }}
         </h3>
@@ -49,15 +50,21 @@ about: true
           rel="noopener noreferrer">
           {{post.data.website}}
         </a>
-      </div>
-      <div class="about__cv__item__stack">
-        {%- for tech in post.data.stack -%}
-        <span>{{ tech }}</span>
-        {%- endfor -%}
-      </div>
-      <div class="about__cv__item__content">
-        {{ post.templateContent | safe}}
-      </div>
+      </summary>
+
+      <section 
+        class="content__list__item__section" 
+        aria-label="{{post.data.title}} teck stack">
+        <ul>
+          {%- for tech in post.data.stack -%}
+          <li>{{ tech }}</li>
+          {%- endfor -%}
+        </ul>
+        <div>
+          {{ post.templateContent | safe}}
+        </div>
+      </section>
+      </details>
     </li>
   {%- endfor -%}
 </ul>

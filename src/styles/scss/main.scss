@@ -17,10 +17,9 @@
 	--striped: repeating-linear-gradient(
 			90deg, 
 			var(--outline), 
-			var(--outline) 2px, 
-			transparent 2px, 
-			transparent 8px);
-	--none: none;
+			var(--outline) 1px, 
+			transparent 1px, 
+			transparent 10px);
 	--background: var(--dotted);
   --font-lg: 20px;
   --font-md: 16px;

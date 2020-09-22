@@ -1,5 +1,9 @@
 @use './media-queries';
 
+@function spacing ($value) {
+  @return 1rem * $value;
+}
+
 @mixin shadow() {
 	background-color: white;
 	border: var(--border);

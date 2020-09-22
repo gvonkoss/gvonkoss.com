@@ -1,33 +1,75 @@
 @use './mixins';
 
 .content__list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	min-width: 100%;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-left: mixins.spacing(2);
 
-  .content__list-item {
+  &:before {
+    content: '';
+    border: var(--border);
+    position: absolute;
+    top: mixins.spacing(0.5);
+    left: mixins.spacing(0.6);
+    bottom: mixins.spacing(-1);
+  }
+
+  &:after {
+    content: '';
+    border: 3px solid var(--outline);
+    border-top: 0;
+    border-left: 0;
+    height: mixins.spacing(1);
+    width: mixins.spacing(1);
+    position: absolute;
+    left: mixins.spacing(0.1);
+    bottom: mixins.spacing(-1);
+    transform: rotate(45deg)
+  }
+}
+
+.content__list__item {
+  margin-bottom: 2rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: var(--highlight);
+    border: var(--border);
+    display: inline-block;
+    height: mixins.spacing(1);
+    width: mixins.spacing(1);
+    position: absolute;
+    top: 0rem;
+    left: mixins.spacing(-2);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: var(--outline);
+    height: mixins.spacing(1.2);
+    width: mixins.spacing(1.2);
+    left: mixins.spacing(-1.8);
+    top: mixins.spacing(0.2);
+    z-index: -1;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.content__list--post {
+  .content__list__item div {
     @include mixins.shadow();
-    padding: 0.8rem;
-    margin-bottom: 0.8rem;
+    padding: mixins.spacing(1);
 
-    &:last-of-type { margin: 0;}
-
-    span {
-      display: block;
-      font-size: var(--font-md);
-      margin-top: 0.4rem;
-    }
-
-    p {
-      margin: 0.4rem 0 0;
-    }
-
-    a {
-      @include mixins.animatedLink('bottom');
-      font-size: var(--font-lg);
-      font-family: 'Fira Sans Condensed', sans-serif;
-      font-weight: 600;
+    h2 {
+      margin: 0 0 mixins.spacing(0.5);
+      line-height: 1.2;
     }
   }
 }

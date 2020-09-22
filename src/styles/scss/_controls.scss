@@ -70,16 +70,17 @@
 
 	#dotted {
 		background-image: var(--dotted);
-		background-size: 4px 4px
+		background-size: 4px 4px;
 	}
 
 	#striped {
 		background-image: var(--striped);
-		background-position-x: 1px;
+		background-position-x: 9px;
+		background-size: 4px;
 	}
 
 	#none {
-		background-image: var(--none);
+		background-image: none;
 	}
 
 	#highlight,
