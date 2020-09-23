@@ -7,7 +7,8 @@
   grid-area: controls;
 
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 1fr 40px 1fr;
+  grid-template-rows: repeat(3, 40px);
   grid-gap: 0.5rem;
 
   > * {
@@ -49,15 +50,15 @@
     grid-column: 2;
     padding: 0.35rem;
 
-    &:nth-of-type(1) {
+    &--dotted {
       grid-row: 1;
     }
 
-    &:nth-of-type(2) {
+    &--striped {
       grid-row: 2;
     }
 
-    &:nth-of-type(3) {
+    &--none {
       grid-row: 3;
     }
 
@@ -90,15 +91,12 @@
   }
 
   #highlight,
-  #dotted,
   #grayscale { grid-row: 1 }
 
   #outline,
-  #striped,
   #random { grid-row: 2 }
 
   #text,
-  #none,
   #reset { grid-row: 3 }
 
   @include media-queries.fromM() {

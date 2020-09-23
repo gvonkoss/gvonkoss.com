@@ -18,13 +18,13 @@ $_spacing: 0.8rem;
 	--outline: #21d19f;
 	--text: #0f624b;
 	--border: 2px solid var(--outline);
-	--dotted: radial-gradient(at center center, var(--outline) 30%, transparent 15%);
+	--dotted: radial-gradient(at center center, var(--outline) 30%, white 15%);
 	--striped: repeating-linear-gradient(
 			90deg, 
 			var(--outline), 
 			var(--outline) 1px, 
-			transparent 1px, 
-			transparent 10px);
+			white 1px, 
+			white 10px);
 	--background: var(--dotted);
   --font-lg: 20px;
   --font-md: 16px;
