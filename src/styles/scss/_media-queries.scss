@@ -3,3 +3,22 @@
     @content;
   }
 };
+
+@mixin printView () {
+  @media print {
+    a#pixel-me,
+    nav.sidebar,
+    div.controls,
+    main:not(.content--about),
+    h1.heading {
+      display: none !important;
+    }
+
+    body {
+      display: block !important;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

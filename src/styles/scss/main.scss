@@ -7,6 +7,9 @@
 @use './list';
 @use './me';
 @use './sidebar';
+@use './media-queries';
+
+@include media-queries.printView();
 
 $_spacing: 0.8rem;
 
