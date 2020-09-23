@@ -49,7 +49,8 @@ body {
 		color: inherit;
 	
 		&:hover {
-			text-decoration-style: double; 
+			text-decoration-style: double;
+			background-color: var(--highlight);
 		}
 	}
 
