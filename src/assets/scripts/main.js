@@ -89,5 +89,5 @@ const buttons = Array.from(document.querySelectorAll('button'), button => {
   let page = document.location.pathname.match(/[^/]{5,}/)[0];
   let link = document.querySelector(`a[href*="${page}"]`);
 
-  link ? link.setAttribute('aria-current', 'page') : null;
+  link ? link.setAttribute('aria-current', 'location') : null;
 })();

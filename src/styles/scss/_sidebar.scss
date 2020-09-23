@@ -30,39 +30,8 @@ $_spacing: 0.8rem;
     margin-bottom: $_spacing;
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    left: 0;
-    transition: right 0.3s ease-in-out;
-    background-color: var(--highlight);
-  }
-
-  @media screen and (prefers-reduced-motion) {
-    &:hover {
-      background-color: var(--highlight);
-
-      &:before {
-        display: none;
-      }
-    }
-  }
-
-  &:hover:before {
-    content: attr(data-text);
-    padding: $_spacing;
-    right: 0;
-  }
-
-  &[aria-current=page] {
-    &:before {
-      right: 0;
-      content: attr(data-text);
-      padding: $_spacing;
-    }
+  &[aria-current=location] {
+    background-color: var(--highlight)
   }
 }
 
