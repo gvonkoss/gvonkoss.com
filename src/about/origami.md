@@ -17,7 +17,10 @@ We supported every customer and developer facing team under the FT brand. This
 involved close work with design, a lot of user research and
 clear, open communication. We maintained template-agnostic
 components and a number of different services to power
-customer products in a visual and performant way.
+customer products in a visual and performant way. In addition to that, it was
+especially important that our components were all compliant with 
+<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG</a>, so
+there was a strong focus on correct semantical and accessible implementation of our components.
 
 Some of the primary focus points were
 improving our documentation, simplifiying our components
