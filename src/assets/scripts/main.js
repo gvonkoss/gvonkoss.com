@@ -86,7 +86,7 @@ const buttons = Array.from(document.querySelectorAll('button'), button => {
 (() => {
   sessionStorage.length === 0 ? setAll(original) : fill();
 
-  let page = document.location.pathname.replace(/\//g, '');
+  let page = document.location.pathname.match(/[^/]{5,}/)[0];
   let link = document.querySelector(`a[href*="${page}"]`);
 
   link ? link.setAttribute('aria-current', 'page') : null;

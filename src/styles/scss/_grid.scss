@@ -4,12 +4,12 @@
   display: grid;
   grid-template-areas:
     '. me controls .'
+    '. sidebar sidebar .'
     '. heading heading .'
     '. content content .'
-    '. sidebar sidebar .'
     '. . . .';
   grid-template-columns: 1fr repeat(2, auto) 1fr;
-  grid-template-rows: 10rem 8rem repeat(2, auto) 1fr;
+  grid-template-rows: 10rem repeat(3, auto)1fr;
   grid-gap: 1.5rem;
 
   margin: 1rem 0;
@@ -33,6 +33,6 @@
       '. sidebar content .'
       '. . . .';
     grid-template-columns: 1fr 15% minmax(auto, 70ch) 1fr;
-    grid-template-rows: 10rem 5rem auto 1fr;
+    grid-template-rows: 10rem repeat(2, auto) 1fr;
   }
 }
