@@ -1,0 +1,20 @@
+@use './media-queries';
+
+$_offset: 0.4rem;
+
+@mixin shadow() {
+  background-color: white;
+  border: var(--border);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--outline);
+    top: $_offset;
+    left: $_offset;
+    right: -$_offset;
+    bottom: -$_offset;
+    z-index: -1;
+  }
+}

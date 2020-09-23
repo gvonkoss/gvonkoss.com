@@ -1,17 +1,18 @@
 {
   "name": "gvonkoss.com",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "The personal website of Gabrielle von Koss",
   "repository": {
     "url": "https://github.com/gvonkoss/gvonkoss.com"
   },
   "scripts": {
-    "build": "npx sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
-    "dev": "npm run build && eleventy"
+    "style": "npx sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
+    "build": "npm run style && eleventy",
+    "dev": "DEBUG=Eleventy* eleventy --serve"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.8.3"
+    "@11ty/eleventy": "^0.11.0"
   }
 }

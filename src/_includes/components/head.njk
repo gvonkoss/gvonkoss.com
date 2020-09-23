@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ site.title }}</title>
+
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="assets/images/pixelme.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="assets/images/pixelme.png">
+  <link rel="shortcut icon" href="{{ '/assets/images/pixelme.png' | url }}">
+  <link rel="stylesheet" href="{{ '/styles/main.css' | url }}">
+  <script>
+    var script = document.createElement('script');
+    var supportsDeferredScripts = "defer" in script && "async" in script;
+    window.ctm = (typeof document.documentElement.dataset === 'object' && ('visibilityState' in document) && supportsDeferredScripts);
+    if (window.ctm) {
+      document.documentElement.classList.remove('no-js');
+    }
+  </script>
+</head>

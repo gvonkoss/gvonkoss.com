@@ -1,24 +1,38 @@
+@use './media-queries';
+
 .grid {
-	display: grid;
-	grid-template-columns: 1fr repeat(2, auto) 1fr;
-	grid-template-rows: repeat(6, auto);
-	grid-gap: 20px;
+  display: grid;
+  grid-template-areas:
+    '. me controls .'
+    '. sidebar sidebar .'
+    '. heading heading .'
+    '. content content .'
+    '. . . .';
+  grid-template-columns: 1fr repeat(2, auto) 1fr;
+  grid-template-rows: 10rem repeat(3, auto)1fr;
+  grid-gap: 1.5rem;
 
-	min-height: 100vh;
-	background-image: var(--background);
-	background-size: var(--background-size);
+  margin: 1rem 0;
+  min-height: 100vh;
+  background-image: var(--background);
+  background-size: 4px 4px;
+  box-sizing: border-box;
 
-	@media screen and (prefers-reduced-motion) {
-		background-image: var(--none);
-		.background {
-			display: var(--none);
-		}
-	}
+  @media screen and (prefers-reduced-motion) {
+    background-image: none;
 
-	box-sizing: border-box;
-	
-	@include layoutS() {
-		grid-template-columns: 1fr 20% minmax(auto, 65ch) 1fr;
-		padding-bottom: 20px;
-	}
+    .background {
+      display: none;
+    }
+  }
+
+  @include media-queries.fromM() {
+    grid-template-areas:
+      '. me controls .'
+      '. me heading .'
+      '. sidebar content .'
+      '. . . .';
+    grid-template-columns: 1fr 15% minmax(auto, 70ch) 1fr;
+    grid-template-rows: 10rem repeat(2, auto) 1fr;
+  }
 }

@@ -1,0 +1,93 @@
+@use './mixins';
+@use './media-queries';
+
+$_spacing: 0.8rem;
+
+.content--about {
+  h2 {
+    @include mixins.shadow();
+    padding: 0 $_spacing;
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  .content--about__personal {
+    @include mixins.shadow();
+    padding: $_spacing;
+    margin-bottom: 3rem;
+  }
+}
+
+.content__list--about {
+  .content__list__item__details {
+    position: relative;
+
+    summary {
+      @include mixins.shadow();
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.5rem $_spacing;
+      margin: 0 0 $_spacing;
+
+      &::marker { content: '' };
+
+      &:before {
+        content: '';
+        display: block;
+        border: var(--border);
+        border-top: 0;
+        border-left: 0;
+        height: 1rem;
+        width: 1rem;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        transition: all .3s ease;
+
+        @media screen and (prefers-reduced-motion) {
+          transition: none;
+        }
+      }
+
+      h3 {
+        margin: 0 0 0.5rem;
+        flex: 0 0 100%;
+      }
+
+      a { margin-left: 0.6rem };
+    }
+
+    &[open] {
+      summary:before {
+        transform: rotate(-135deg);
+        bottom: 0.5rem;
+      }
+    }
+  }
+
+  .content__list__item__section {
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: flex-start;
+      padding-left: 0;
+
+      li {
+        @include mixins.shadow();
+        font-size: var(--font-md);
+        margin: 0 0.5rem $_spacing 0;
+        padding: 0.2rem 0.5rem;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+    }
+
+    div {
+      @include mixins.shadow();
+      padding: 0.5rem $_spacing;
+    }
+  }
+}
