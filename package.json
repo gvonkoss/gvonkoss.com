@@ -1,14 +1,15 @@
 {
   "name": "gvonkoss.com",
-  "version": "2.1.0",
+  "version": "1.0.0",
   "description": "The personal website of Gabrielle von Koss",
   "repository": {
     "url": "https://github.com/gvonkoss/gvonkoss.com"
   },
   "scripts": {
-    "style": "npx sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
-    "build": "npm run style && eleventy",
-    "dev": "DEBUG=Eleventy* eleventy --serve"
+    "build": "npx sass --style=compressed src/styles/scss/main.scss:src/styles/main.css",
+    "build:dev": "npx sass src/styles/scss/main.scss:src/styles/main.css --watch",
+    "dev": "npx concurrently 'npm run build:dev' 'DEBUG=Eleventy* eleventy --serve'",
+    "start": "npm run build && eleventy --serve"
   },
   "author": "Gabrielle von Koss",
   "license": "ISC",

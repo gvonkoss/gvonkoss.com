@@ -23,13 +23,7 @@ $_icon-size: 15vw;
   }
 }
 
-.no-js #pixel-me {
-  grid-area: 2 / 2 / 3 / 4;
-  justify-self: center;
-}
-
 @include media-queries.fromM() {
-  .no-js #pixel-me,
   #pixel-me {
     justify-self: flex-end;
     height: $_icon-size;

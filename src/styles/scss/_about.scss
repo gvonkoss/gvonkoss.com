@@ -19,7 +19,7 @@ $_spacing: 0.8rem;
 }
 
 .content__list--about {
-  .content__list__item__details {
+  details.content__list__item__details {
     position: relative;
 
     summary {
@@ -29,8 +29,10 @@ $_spacing: 0.8rem;
       flex-wrap: wrap;
       padding: 0.5rem $_spacing;
       margin: 0 0 $_spacing;
+      list-style: none;
 
-      &::marker { content: '' };
+      &::marker,
+      &::-webkit-details-marker { display: none };
 
       &:before {
         content: '';
@@ -56,7 +58,13 @@ $_spacing: 0.8rem;
         flex: 0 0 100%;
       }
 
-      a { margin-left: 0.6rem };
+      span {
+        margin-right: 0.6rem;
+      }
+
+      a {
+        width: max-content;
+      };
     }
 
     &[open] {
