@@ -570,12 +570,12 @@ h1.heading {
   --border: 2px solid var(--outline);
   --dotted: radial-gradient(at center center, var(--outline) 30%, white 15%);
   --striped: repeating-linear-gradient(
-  		90deg,
-  		var(--outline),
-  		var(--outline) 1px,
-  		white 1px,
-  		white 10px);
-  --background: var(--dotted);
+      90deg,
+      var(--outline),
+      var(--outline) 1px,
+      white 1px,
+      white 10px);
+  --pumpkin: url("../../assets/images/pumpkin.png");
   --font-lg: 20px;
   --font-md: 16px;
 }
@@ -586,7 +586,7 @@ html {
 
 body {
   color: var(--text);
-  background: var(--background);
+  background-attachment: fixed;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: var(--font-lg);
   min-height: 100vh;
@@ -594,6 +594,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+body #bob {
+  display: none;
 }
 body a {
   color: inherit;
