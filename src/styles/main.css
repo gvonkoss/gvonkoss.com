@@ -576,6 +576,8 @@ h1.heading {
       white 1px,
       white 10px);
   --pumpkin: url("../../assets/images/pumpkin.png");
+  --pumpkin-background: fixed repeat var(--pumpkin) var(--outline);
+  --background: var(--dotted);
   --font-lg: 20px;
   --font-md: 16px;
 }
@@ -594,9 +596,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-body #bob {
-  display: none;
 }
 body a {
   color: inherit;
