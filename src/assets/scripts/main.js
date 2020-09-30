@@ -1,15 +1,12 @@
-import './egg.js';
-import { 
-  ColorControls,
-  BackgroundControls
+import {
+  EggController
 } from './controls/index.js';
 
-const root = document.documentElement.style;
-new BackgroundControls(root);
-const colors = new ColorControls(root);
+const controller = new EggController();
 
+const colors = controller.setUp();
 (() => {
-  sessionStorage.length === 0 ? colors.setAll(original) : colors.fill();
+  sessionStorage.length === 0 ? colors.setAll() : colors.fill();
 
   const page = document.location.pathname.match(/[^/]{5,}/);
 

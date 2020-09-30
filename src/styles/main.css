@@ -238,6 +238,10 @@
 .controls .background--dotted {
   grid-row: 1;
 }
+.controls .background--pumpkin {
+  display: none;
+  grid-row: 1;
+}
 .controls .background--striped {
   grid-row: 2;
 }
@@ -250,8 +254,13 @@
   vertical-align: super;
 }
 .controls #dotted {
-  background-image: var(--dotted);
-  background-size: 4px 4px;
+  background: var(--dotted);
+  background-position: unset;
+}
+.controls #pumpkin-background {
+  background-image: var(--pumpkin);
+  background-color: var(--outline);
+  background-size: contain;
 }
 .controls #striped {
   background-image: var(--striped);
@@ -309,6 +318,13 @@
   font-weight: 400;
   src: local("Fira Mono Regular"), local("FiraMono-Regular"), url("../../assets/fonts/fira-mono-v9-latin-regular.woff2") format("woff2"), url("../../assets/fonts/fira-mono-v9-latin-regular.woff") format("woff");
 }
+html.halloween-egg .controls .background--dotted {
+  display: none;
+}
+html.halloween-egg .controls .background--pumpkin {
+  display: block;
+}
+
 .grid {
   display: grid;
   grid-template-areas: ". me controls ." ". sidebar sidebar ." ". heading heading ." ". content content ." ". . . .";
@@ -317,13 +333,12 @@
   grid-gap: 1.5rem;
   margin: 1rem 0;
   min-height: 100vh;
-  background-image: var(--background);
-  background-size: 4px 4px;
+  background: var(--background);
   box-sizing: border-box;
 }
 @media screen and (prefers-reduced-motion) {
   .grid {
-    background-image: none;
+    background: none;
   }
   .grid .background {
     display: none;
@@ -568,7 +583,7 @@ h1.heading {
   --outline: #21d19f;
   --text: #0f624b;
   --border: 2px solid var(--outline);
-  --dotted: radial-gradient(at center center, var(--outline) 30%, white 15%);
+  --dotted: fixed radial-gradient(at center center, var(--outline) 30%, white 15%) repeat center/4px 4px;
   --striped: repeating-linear-gradient(
       90deg,
       var(--outline),

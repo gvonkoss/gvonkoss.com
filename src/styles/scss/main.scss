@@ -2,6 +2,7 @@
 @use './content';
 @use './controls';
 @use './fonts' as *;
+@use './eggs';
 @use './grid';
 @use './heading';
 @use './list';
@@ -18,7 +19,7 @@ $_spacing: 0.8rem;
   --outline: #21d19f;
   --text: #0f624b;
   --border: 2px solid var(--outline);
-  --dotted: radial-gradient(at center center, var(--outline) 30%, white 15%);
+  --dotted: fixed radial-gradient(at center center, var(--outline) 30%, white 15%) repeat center/4px 4px;
   --striped: repeating-linear-gradient(
       90deg,
       var(--outline),

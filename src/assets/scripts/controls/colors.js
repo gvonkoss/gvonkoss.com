@@ -1,7 +1,7 @@
 import { SessionStorage } from './session.js';
 
 export class ColorControls extends SessionStorage {
-  constructor(root) {
+  constructor(root, original) {
     super();
     this.root = root
     this.inputs = Array.from(document.querySelectorAll('input'), input => {
@@ -15,11 +15,7 @@ export class ColorControls extends SessionStorage {
       button.addEventListener('keydown', this);
     })
 
-    this.original = {
-      highlight: '#d1fff3',
-      outline: '#21d19f',
-      text: '#0f624b'
-    }
+    this.original = original;
 
     this.grayscale = {
       highlight: '#dcdcdc',
@@ -54,13 +50,13 @@ export class ColorControls extends SessionStorage {
     this.set(property, value)
   }
 
-  setAll = (colors) => {
+  setAll = (colors = this.original) => {
     this.set('highlight', colors.highlight);
     this.set('outline', colors.outline);
     this.set('text', colors.text);
   
     if (colors.highlight === this.original.highlight) {
-      this.set('background', 'var(--dotted)');
+      this.set('background', this.original.background);
       this.set('size', '4px 4px');
     }
   
