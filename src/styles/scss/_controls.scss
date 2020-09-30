@@ -54,6 +54,11 @@
       grid-row: 1;
     }
 
+    &--pumpkin {
+      display: none;
+      grid-row: 1;
+    }
+
     &--striped {
       grid-row: 2;
     }
@@ -70,8 +75,14 @@
   }
 
   #dotted {
-    background-image: var(--dotted);
-    background-size: 4px 4px;
+    background: var(--dotted);
+    background-position: unset;
+  }
+
+  #pumpkin-background {
+    background-image: var(--pumpkin);
+    background-color: var(--outline);
+    background-size: contain;
   }
 
   #striped {

@@ -2,6 +2,7 @@
 @use './content';
 @use './controls';
 @use './fonts' as *;
+@use './eggs';
 @use './grid';
 @use './heading';
 @use './list';
@@ -14,66 +15,68 @@
 $_spacing: 0.8rem;
 
 :root {
-	--highlight: #d1fff3;
-	--outline: #21d19f;
-	--text: #0f624b;
-	--border: 2px solid var(--outline);
-	--dotted: radial-gradient(at center center, var(--outline) 30%, white 15%);
-	--striped: repeating-linear-gradient(
-			90deg, 
-			var(--outline), 
-			var(--outline) 1px, 
-			white 1px, 
-			white 10px);
-	--background: var(--dotted);
+  --highlight: #d1fff3;
+  --outline: #21d19f;
+  --text: #0f624b;
+  --border: 2px solid var(--outline);
+  --dotted: fixed radial-gradient(at center center, var(--outline) 30%, white 15%) repeat center/4px 4px;
+  --striped: repeating-linear-gradient(
+      90deg,
+      var(--outline),
+      var(--outline) 1px,
+      white 1px,
+      white 10px);
+  --pumpkin: url('../../assets/images/pumpkin.png');
+  --pumpkin-background: fixed repeat var(--pumpkin) var(--outline);
+  --background: var(--dotted);
   --font-lg: 20px;
   --font-md: 16px;
 }
 
 html { 
-	min-height: 100%;
+  min-height: 100%;
 }
 
 body {
-	color: var(--text);
-	background: var(--background);
-	font-family: 'Fira Sans Condensed', sans-serif;
-	font-size: var(--font-lg);
-	min-height: 100vh;
-	margin: 0;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	
-	a {
-		color: inherit;
-	
-		&:hover {
-			text-decoration-style: double;
-			background-color: var(--highlight);
-		}
-	}
+  color: var(--text);
+  background-attachment: fixed;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: var(--font-lg);
+  min-height: 100vh;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  
+  a {
+    color: inherit;
+  
+    &:hover {
+      text-decoration-style: double;
+      background-color: var(--highlight);
+    }
+  }
 
-	code {
-		background-color: var(--highlight);
-		font-family: 'Fira Mono', monospace;
-		font-size: var(--font-md);
-		padding: 0.2rem 0.3rem;
-	}
+  code {
+    background-color: var(--highlight);
+    font-family: 'Fira Mono', monospace;
+    font-size: var(--font-md);
+    padding: 0.2rem 0.3rem;
+  }
 
-	pre {
-		background-color: var(--highlight);
-		padding: $_spacing;
-		white-space: pre-wrap;
+  pre {
+    background-color: var(--highlight);
+    padding: $_spacing;
+    white-space: pre-wrap;
 
-		code {
-			padding: 0;
-		}
-	}
+    code {
+      padding: 0;
+    }
+  }
 
-	blockquote {
-		margin: 0;
-		padding-left: $_spacing;
-		border-left: var(--border);
-	}
+  blockquote {
+    margin: 0;
+    padding-left: $_spacing;
+    border-left: var(--border);
+  }
 }
