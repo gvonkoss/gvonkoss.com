@@ -1,10 +1,15 @@
 import './egg.js';
-import ColorControls from './colors.js';
+import { 
+  ColorControls,
+  BackgroundControls
+} from './controls/index.js';
 
-const controls = new ColorControls();
+const root = document.documentElement.style;
+new BackgroundControls(root);
+const colors = new ColorControls(root);
 
 (() => {
-  sessionStorage.length === 0 ? setAll(original) : controls.fill();
+  sessionStorage.length === 0 ? colors.setAll(original) : colors.fill();
 
   const page = document.location.pathname.match(/[^/]{5,}/);
 

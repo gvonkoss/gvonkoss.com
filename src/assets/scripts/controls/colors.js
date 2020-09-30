@@ -1,16 +1,18 @@
-export default class Colors {
-  constructor() {
-    this.root = document.documentElement.style;
+import { SessionStorage } from './session.js';
+
+export class ColorControls extends SessionStorage {
+  constructor(root) {
+    super();
+    this.root = root
     this.inputs = Array.from(document.querySelectorAll('input'), input => {
       input.addEventListener('input', this);
       input.addEventListener('change', this);
       return input;
     })
 
-    this.buttons = Array.from(document.querySelectorAll('button'), button => {
+    this.buttons = Array.from(document.querySelectorAll('.controls .color'), button => {
       button.addEventListener('click', this);
       button.addEventListener('keydown', this);
-      return button;
     })
 
     this.original = {
@@ -36,12 +38,6 @@ export default class Colors {
     return `#${Math.random().toString(16).slice(2, 8)}`;
   }
 
-  get (value) { 
-    return sessionStorage.getItem(value)
-  };
-
-  set (property, value) { sessionStorage.setItem(property, value) };
-
   fill () {
     this.root.setProperty('--highlight', this.get('highlight'));
     this.root.setProperty('--outline', this.get('outline'));
@@ -54,15 +50,6 @@ export default class Colors {
   }
 
   setOne = (property, value) => {
-    if ((property === 'dotted' || property === 'striped' || property === 'none')) {
-      value = `var(--${property})`;
-      let size = property === 'striped' ? 'none' : '4px 4px';
-      property = 'background';
-  
-      this.set('size', size);
-      this.root.setProperty('--background-size', this.get('size'));
-    }
-  
     this.root.setProperty(`--${property}`, value);
     this.set(property, value)
   }
