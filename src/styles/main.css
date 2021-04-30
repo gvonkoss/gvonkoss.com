@@ -495,11 +495,15 @@ html.halloween-egg .controls .background--pumpkin {
 }
 .sidebar {
   grid-area: sidebar;
+}
+.sidebar ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 0.5rem;
   width: 100%;
+  padding: 0;
+  list-style-type: none;
 }
 @media (min-width: 720px) {
   .sidebar {
@@ -507,6 +511,9 @@ html.halloween-egg .controls .background--pumpkin {
     align-self: flex-start;
     position: sticky;
     top: 0.8rem;
+  }
+  .sidebar ul {
+    display: block;
   }
 }
 
@@ -517,6 +524,7 @@ html.halloween-egg .controls .background--pumpkin {
   align-self: center;
   text-decoration: none;
   padding: 0.8rem;
+  display: block;
 }
 .sidebar__link::after {
   content: "";
@@ -530,7 +538,6 @@ html.halloween-egg .controls .background--pumpkin {
 }
 @media (min-width: 720px) {
   .sidebar__link {
-    display: block;
     margin-bottom: 0.8rem;
   }
 }
@@ -612,11 +619,36 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+body *:focus-visible {
+  outline: 3px solid var(--outline);
+}
+body a.skip-to-content {
+  background-color: white;
+  border: var(--border);
+  position: relative;
+  grid-area: me;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 4px;
+  opacity: 0;
+}
+body a.skip-to-content::after {
+  content: "";
+  position: absolute;
+  background-color: var(--outline);
+  top: 0.4rem;
+  left: 0.4rem;
+  right: -0.4rem;
+  bottom: -0.4rem;
+  z-index: -1;
+}
+body a.skip-to-content:focus {
+  opacity: 1;
+}
 body a {
   color: inherit;
 }
 body a:hover {
-  text-decoration-style: double;
   background-color: var(--highlight);
 }
 body code {

@@ -63,8 +63,10 @@ export class ColorControls extends SessionStorage {
     this.fill();
   }
 
-  handleEvent ({target}) {
-    switch (target.id) {
+  handleEvent (e) {
+    if (e.key && (e.key !== 'Enter' || e.key !== '')) return;
+  
+    switch (e.target.id) {
       case 'reset':
         this.setAll(this.original);
         break;
@@ -75,7 +77,7 @@ export class ColorControls extends SessionStorage {
         this.setAll(this.grayscale)
         break;
       default:
-        this.setOne(target.id, target.value);
+        this.setOne(e.target.id, e.target.value);
     }
   }
 }
