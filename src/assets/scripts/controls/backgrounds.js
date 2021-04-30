@@ -10,8 +10,10 @@ export class BackgroundControls extends SessionStorage {
     })
   }
 
-  handleEvent ({ target: { id } }) {
-    const value = `var(--${id})`;
+  handleEvent (e) {
+    if (e.key && (e.key !== 'Enter' || e.key !== '')) return;
+
+    const value = `var(--${e.target.id})`;
 
     this.root.setProperty(`--background`, value);
     this.set('background', value)

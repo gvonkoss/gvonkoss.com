@@ -4,15 +4,17 @@
   {% include 'components/head.njk'%}
 
   <body class="grid">
-    {% include 'components/controls.njk' %}
+    <a class="skip-to-content" href="#content" target="_self">Skip to Content</a>
 
     <a href="/" id="pixel-me" title="Home" aria-label="8bit portrait of Gabrielle von Koss and link to homepage"></a>
-
     {% include 'components/sidebar.njk' %}
+
+
+    {% include 'components/controls.njk' %}
 
     <h1 class="heading">{{ title }}</h1>
 
-    <main class="content{{ ' content--text' if text }}{{ ' content--about' if about}}">
+    <main class="content{{ ' content--text' if text }}{{ ' content--about' if about}}" id="content">
       {{ content | safe }}
     </main>
 

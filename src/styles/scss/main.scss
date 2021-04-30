@@ -8,6 +8,7 @@
 @use './list';
 @use './me';
 @use './sidebar';
+@use './mixins';
 @use './media-queries';
 
 @include media-queries.printView();
@@ -52,11 +53,23 @@ body {
     outline: 3px solid var(--outline);
   }
 
+  a.skip-to-content {
+    @include mixins.shadow();
+    grid-area: me;
+    align-self: flex-start;
+    text-decoration: none;
+    padding: 4px;
+    opacity: 0;
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
   a {
     color: inherit;
   
     &:hover {
-      text-decoration-style: double;
       background-color: var(--highlight);
     }
   }

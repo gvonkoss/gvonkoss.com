@@ -622,11 +622,33 @@ body {
 body *:focus-visible {
   outline: 3px solid var(--outline);
 }
+body a.skip-to-content {
+  background-color: white;
+  border: var(--border);
+  position: relative;
+  grid-area: me;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 4px;
+  opacity: 0;
+}
+body a.skip-to-content::after {
+  content: "";
+  position: absolute;
+  background-color: var(--outline);
+  top: 0.4rem;
+  left: 0.4rem;
+  right: -0.4rem;
+  bottom: -0.4rem;
+  z-index: -1;
+}
+body a.skip-to-content:focus {
+  opacity: 1;
+}
 body a {
   color: inherit;
 }
 body a:hover {
-  text-decoration-style: double;
   background-color: var(--highlight);
 }
 body code {
