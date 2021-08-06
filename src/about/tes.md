@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Times Educational Supplement (Tes)
-timeline: Jan '20 - Present
+timeline: Jan '20 - Oct '20
 date: 2020-01-01
 location: Remote
 position: Engineer
