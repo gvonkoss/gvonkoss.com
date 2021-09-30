@@ -31,7 +31,7 @@
       '. me heading .'
       '. sidebar content .'
       '. . . .';
-    grid-template-columns: 1fr 15% minmax(auto, 70ch) 1fr;
+    grid-template-columns: 1fr 20% minmax(auto, 65ch) 1fr;
     grid-template-rows: 10rem repeat(2, auto) 1fr;
   }
 }
