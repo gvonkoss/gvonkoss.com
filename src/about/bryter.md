@@ -5,8 +5,8 @@ timeline: Nov '20 - Present
 date: 2020-11-01
 location: Remote
 position: Design Systems Engineer
-stack: [JavaScript, Sass, Web Components, NodeJS, Vue]
-website: www.bryter.com
+stack: [JavaScript, Sass, Web Components, Lit, NodeJS, Vue]
+website: www.bliss.bryter.com
 tags: [ 'about', 'cv', 'timeline' ]
 text: true
 ---
