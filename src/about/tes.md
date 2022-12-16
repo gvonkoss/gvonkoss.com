@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
 title: Times Educational Supplement (Tes)
-timeline: Jan '20 - Oct '20
+timeline: 2020
 date: 2020-01-01
 location: Remote
 position: Engineer
 stack: [JavaScript, Sass, React, Redux, NodeJS, WebPack, Jenkins]
 website: www.tes.com
-tags: [ 'about', 'cv', 'timeline' ]
+tags: ['about', 'cv', 'timeline']
 text: true
 ---
 

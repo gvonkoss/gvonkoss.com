@@ -1,19 +1,19 @@
 ---
 layout: layouts/base.njk
-title: BRYTER 
-timeline: Nov '20 - Present
+title: BRYTER
+timeline: 2020 - 2021
 date: 2020-11-01
 location: Remote
 position: Design Systems Engineer
 stack: [JavaScript, Sass, Web Components, Lit, NodeJS, Vue]
 website: www.bliss.bryter.com
-tags: [ 'about', 'cv', 'timeline' ]
+tags: ['about', 'cv', 'timeline']
 text: true
 ---
 
 BRYTER is a no-code platform that enables experts to automate decision making in their respective fields. The platform is predominantly used by corporate compliance, legal and tax departments to digitize and distribute decision making knowledge, and by consultants (law firms, auditors) to productise and scale expertise.
 
-In a tiny nutshell, BRYTER works on making the work of others easier. 
+In a tiny nutshell, BRYTER works on making the work of others easier.
 
 As an extension of that, Bliss, BRYTER's design system, aims to make the work of every contributor to the product easier, too. Currently, the Bliss is in it's infancy, and gaining traction. We're a small team that aims to build a robust and flexible system that supports technology-agnostic implementation, design guidelines and brand patterns.
 

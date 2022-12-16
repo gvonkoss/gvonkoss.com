@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
 title: Origami - Financial Times
-timeline: Sept '16 - May '19
+timeline: 2016 - 2019
 date: 2016-09-01
 location: London, UK
 position: Engineer
 stack: [JavaScript, Sass, Handlebars, NodeJS, CircleCI]
 website: www.origami.ft.com
-tags: [ 'about', 'cv', 'timeline' ]
+tags: ['about', 'cv', 'timeline']
 ---
 
 Origami is the Financial Times' component library. We worked on
@@ -19,7 +19,7 @@ involved close work with design, a lot of user research and
 clear, open communication. We maintained template-agnostic
 components and a number of different services to power
 customer products in a visual and performant way. In addition to that, it was
-legislatively important that our components were all compliant with 
+legislatively important that our components were all compliant with
 <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG</a>, so
 there was a strong focus on correct semantical and accessible implementation.
 
