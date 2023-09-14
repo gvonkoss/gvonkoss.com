@@ -5,16 +5,12 @@ timeline: 2020
 date: 2020-01-01
 location: Remote
 position: Engineer
-stack: [JavaScript, Sass, React, Redux, NodeJS, WebPack, Jenkins]
+stack: [JavaScript, Sass, React, Redux, NodeJS, WebPack, Jenkins, Accessibility]
 website: www.tes.com
 tags: ['about', 'cv', 'timeline']
 text: true
 ---
 
-TES is a hundred-year-old organisation that began as a magazine, and has transitioned into a digital education platform that connects teachers with schools around the world.
+In a predominantly front-end focused team, I worked to support an important digital transition for TES, a long-standing education platform that connects teachers and schools around the globe. As the demands on the product grew, the need for a modern stack became apparent, and this was the focus of my work. Through these updates I focused on improving the level of functional accessibility in our components, and worked closely with the design team to rework and update components and high-level UI.
 
-Our team is responsible for the fundamental connection between both parties—advertising positions in schools to teachers. Some time ago the technology powering the website was transformed into a JavaScript stack, from C#. Our work has revolved primarily around modernising that change. Our efforts honed in on improving our page performance, SEO, bundle sizes, UI, and accessibility.
-
-Within that, my responsibilities lie in supporting the squad by mentoring junior members of the team, providing insight on the best practices, performance enhancements, and emerging technology within our chosen tech stack. And consequently, propelling the necessary changes forward through company-wide knowledge sharing and cross-team collaboration.
-
-That effort has cascaded into other squads across the company, where we strive to make changes to shared frontend components and services that will contribute to similar improvements to other products within the business.
+My expertise with React allowed me to contribute to the product by supporting team members across squads who were at the beginning of journey with the framework. This effort opened more avenues of cross-team collaboration and through that, company-wide knowledge sharing.
