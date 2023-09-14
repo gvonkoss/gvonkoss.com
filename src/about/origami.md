@@ -5,26 +5,11 @@ timeline: 2016 - 2019
 date: 2016-09-01
 location: London, UK
 position: Engineer
-stack: [JavaScript, Sass, Handlebars, NodeJS, CircleCI]
+stack: [JavaScript, Sass, Handlebars, NodeJS, CircleCI, Component Library]
 website: www.origami.ft.com
 tags: ['about', 'cv', 'timeline']
 ---
 
-Origami is the Financial Times' component library. We worked on
-delivering brand and behavioural consistency across all FT
-products, both internal and external.
+For over two years I wore a number of hats alongside three other colleagues, carefully maintaining, updating and improving Origami, the Financial Times' component library. I worked very closely with design, did a lot of user research and developed clear communication guidelnes to support the 300+ network of developers and designers that worked under the Financial Times' brand, both in-house and third party.
 
-We supported every customer and developer facing team under the FT brand. This
-involved close work with design, a lot of user research and
-clear, open communication. We maintained template-agnostic
-components and a number of different services to power
-customer products in a visual and performant way. In addition to that, it was
-legislatively important that our components were all compliant with
-<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG</a>, so
-there was a strong focus on correct semantical and accessible implementation.
-
-Some of the primary focus points were
-improving our documentation, simplifiying our components
-for our users, allowing product-specific customisation, and
-managing our workflow with custom webhooks and improved
-internal tooling.
+The team's main collective and continuous goals were: maintaining the FT's accessibility certification through the components in the library, ensuring clear and updated documentation, and providing high level customisation for the multiple brands that have come to rely on the Origami components.
