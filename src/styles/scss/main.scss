@@ -1,99 +1,149 @@
-@use './about';
-@use './content';
-@use './controls';
-@use './fonts' as *;
-@use './eggs';
-@use './grid';
-@use './heading';
-@use './list';
-@use './me';
-@use './sidebar';
-@use './mixins';
-@use './media-queries';
-
-@include media-queries.printView();
-
-$_spacing: 0.8rem;
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400&display=swap');
 
 :root {
-  --highlight: #d1fff3;
-  --outline: #21d19f;
-  --text: #0f624b;
-  --border: 2px solid var(--outline);
-  --dotted: fixed radial-gradient(at center center, var(--outline) 30%, white 15%) repeat center/4px 4px;
-  --striped: repeating-linear-gradient(
-      90deg,
-      var(--outline),
-      var(--outline) 1px,
-      white 1px,
-      white 10px);
-  --pumpkin: url('../../assets/images/pumpkin.png');
-  --pumpkin-background: fixed repeat var(--pumpkin) var(--outline);
-  --background: var(--dotted);
-  --font-lg: 20px;
-  --font-md: 16px;
-}
-
-html { 
-  min-height: 100%;
+  --slice: 10vw;
+  --radius: 0.25em 0 0 0.25em;
 }
 
 body {
-  color: var(--text);
-  background-attachment: fixed;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: var(--font-lg);
-  min-height: 100vh;
+  font-family: 'Domine', 'Gill Sans', serif;
+  display: grid;
+  grid-template-columns: 20vw repeat(3, 3px) auto;
+  grid-template-rows: repeat(3, auto);
   margin: 0;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  
-  *:focus-visible {
-    outline: 3px solid var(--outline);
+  height: 100vh;
+}
+
+header {
+  grid-column: 1;
+  grid-row: 1;
+  border-right: 2px solid black;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
+
+hr {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  background-color: black;
+  border: 0;
+  width: 3px;
+  margin: 0;
+  justify-self: flex-end;
+
+  &:nth-of-type(2) {
+    grid-column: 2;
+    background-color: yellow;
   }
 
-  a.skip-to-content {
-    @include mixins.shadow();
-    grid-area: me;
-    align-self: flex-start;
-    text-decoration: none;
-    padding: 4px;
-    opacity: 0;
-
-    &:focus {
-      opacity: 1;
-    }
+  &:nth-of-type(3) {
+    grid-column: 3;
+    background-color: magenta;
   }
 
-  a {
-    color: inherit;
-  
-    &:hover {
-      background-color: var(--highlight);
-    }
+  &:nth-of-type(4) {
+    grid-column: 4;
+    background-color: cyan;
   }
+}
 
-  code {
-    background-color: var(--highlight);
-    font-family: 'Fira Mono', monospace;
-    font-size: var(--font-md);
-    padding: 0.2rem 0.3rem;
-  }
+nav {
+  grid-column: 1;
+  grid-row: 2;
 
-  pre {
-    background-color: var(--highlight);
-    padding: $_spacing;
-    white-space: pre-wrap;
-
-    code {
-      padding: 0;
-    }
-  }
-
-  blockquote {
+  ul {
     margin: 0;
-    padding-left: $_spacing;
-    border-left: var(--border);
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    list-style-type: none;
+
+    li {
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+      }
+
+      &:before {
+        top: -8px;
+        bottom: -8px;
+        left: -8px;
+        right: -12px;
+        border-radius: 0.5em 0 0 0.5em;
+      }
+
+      &:after {
+        top: -11px;
+        bottom: -11px;
+        left: -11px;
+        right: -13px;
+        border-radius: 0.75em 0 0 0.75em;
+      }
+
+      padding: 8px 16px;
+      margin: 5px 0;
+      border-radius: var(--radius);
+      text-align: right;
+      border: 2px solid black;
+      border-right-width: 6px;
+
+      &:hover,
+      &:focus-within {
+        outline: 3px solid yellow;
+        // outline-offset: 3px;
+
+        &:before {
+          border: 3px solid magenta;
+          border-right: none;
+        }
+
+        &:after {
+          border: 3px solid cyan;
+          border-right: none;
+        }
+      }
+    }
   }
+}
+
+main {
+  grid-column: 5;
+  grid-row: 1 / -1;
+  box-sizing: border-box;
+  padding: 8px;
+  height: 100vh;
+  overflow: scroll;
+  // border-left: 3px solid cyan;
+  position: relative;
+
+  // &:after,
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  // }
+
+  // &:after {
+  //   border-left: 3px solid magenta;
+  // }
+
+  // &:before {
+  //   border-left: 3px solid yellow;
+  // }
+}
+
+p:last-of-type {
+  margin-bottom: 0;
 }
