@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Offside&family=Share:ital,wght@0,400;0,700;1,400;1,700&family=Signika:wght@300..700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+@use './mixins';
+@use './fonts';
 
 :root {
   --slice: 10vw;
@@ -91,16 +92,6 @@ hr {
   }
 }
 
-@mixin position($level) {
-  $value: if($level == 'middle', -2, -3);
-
-  position: absolute;
-  top: calc(var(--border-width) * $value);
-  bottom: calc(var(--border-width) * $value);
-  left: calc(var(--border-width) * $value);
-  right: calc(var(--border-width) * $value);
-}
-
 nav {
   grid-area: nav;
   margin: auto;
@@ -150,12 +141,12 @@ nav {
       }
 
       &:before {
-        @include position('middle');
+        @include mixins.position('middle');
         border-radius: var(--radius-level-2);
       }
 
       &:after {
-        @include position('outer');
+        @include mixins.position('outer');
         border-radius: var(--radius-level-3);
       }
 
@@ -253,11 +244,11 @@ menu {
     }
 
     &:before {
-      @include position('middle');
+      @include mixins.position('middle');
     }
 
     &:after {
-      @include position('outer');
+      @include mixins.position('outer');
     }
 
     &:hover,

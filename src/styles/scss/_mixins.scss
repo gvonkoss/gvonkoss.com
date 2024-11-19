@@ -1,20 +1,9 @@
-@use './media-queries';
+@mixin position($level) {
+  $value: if($level == 'middle', -2, -3);
 
-$_offset: 0.4rem;
-
-@mixin shadow() {
-  background-color: white;
-  border: var(--border);
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    background-color: var(--outline);
-    top: $_offset;
-    left: $_offset;
-    right: -$_offset;
-    bottom: -$_offset;
-    z-index: -1;
-  }
+  position: absolute;
+  top: calc(var(--border-width) * $value);
+  bottom: calc(var(--border-width) * $value);
+  left: calc(var(--border-width) * $value);
+  right: calc(var(--border-width) * $value);
 }
