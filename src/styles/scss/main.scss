@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Offside&family=Share:ital,wght@0,400;0,700;1,400;1,700&family=Signika:wght@300..700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap');
+
 :root {
   --slice: 10vw;
   --base-px: calc(1rem / 3);
-  --radius: 0.25em;
-  --border-radius: var(--radius) 0 0 var(--radius);
-  --border-width: var(--base-px);
+  --border-width: 6px;
   --c: cyan;
   --m: magenta;
   --y: yellow;
@@ -12,39 +11,42 @@
   --bg: white;
   --text: var(--k);
   --font-family: 'Signika';
+  --margin: calc(var(--base-px) * 4);
 }
 
 body {
   font-family: var(--font-family), sans-serif;
   font-weight: 200;
-  font-size: 18px;
+  font-size: 24px;
 
   color: var(--text);
   background-color: var(--bg);
 
   display: grid;
   grid-template-columns:
-    minmax(min-content, 25%) repeat(3, var(--base-px))
+    minmax(min-content, 30%) repeat(3, var(--base-px))
     auto;
   grid-template-rows: repeat(3, auto);
+  row-gap: var(--margin);
 
   margin: 0;
   height: 100vh;
 
-  &:has(input[type='checkbox']:checked) {
+  &:has(input#toggle:checked) {
     --c: blue;
     --m: rgb(0, 255, 0);
     --y: red;
-    --k: white;
-    --bg: black;
-    --text: white;
+    --k: rgba(255, 255, 255, 0.9);
+    --bg: rgba(0, 0, 0, 0.95);
+    --text: rgba(255, 255, 255, 0.9);
   }
 }
 
 header {
   grid-column: 1;
   grid-row: 1;
-  margin: calc(var(--base-px) * 4);
+  margin: var(--margin) var(--margin) 0;
+  line-height: 1.4;
 
   h1 {
     margin-top: 0;
@@ -84,27 +86,26 @@ hr {
   }
 }
 
-@mixin border {
-  border: var(--border-width) solid transparent;
-  border-right: none;
-}
+@mixin position($level) {
+  $value: if($level == 'middle', -2, -3);
 
-@mixin position($value) {
   position: absolute;
-  top: $value;
-  bottom: $value;
-  left: $value;
-  right: $value;
+  top: calc(var(--border-width) * $value);
+  bottom: calc(var(--border-width) * $value);
+  left: calc(var(--border-width) * $value);
+  right: calc(var(--border-width) * $value);
 }
 
 nav {
   grid-column: 1;
   grid-row: 2;
+  margin: 0 var(--margin);
 
   ul {
     display: flex;
-    flex-flow: column;
-    align-items: flex-end;
+    flex-flow: row wrap;
+
+    gap: var(--border-width);
 
     margin: 0;
     padding: 0;
@@ -112,50 +113,55 @@ nav {
     list-style-type: none;
 
     li {
-      @include border();
-      border-radius: 0.6em 0 0 0.6em;
+      --radius-level-0: 0.3em;
+      --radius-level-1: calc(var(--radius-level-0) + var(--border-width) + 3px);
+      --radius-level-2: calc(var(--radius-level-1) + var(--border-width));
+      --radius-level-3: calc(var(--radius-level-2) + var(--border-width));
+
+      border: var(--border-width) solid transparent;
+      border-radius: var(--radius-level-1);
       position: relative;
       cursor: pointer;
-      margin: var(--base-px) 0;
+      margin: 0;
       text-align: right;
 
       a {
         display: block;
         padding: var(--base-px) calc(var(--base-px) * 2);
-        border-radius: var(--border-radius);
         border: var(--border-width) solid var(--text);
+        border-radius: var(--radius-level-0);
         background-color: var(--bg);
-        font-weight: 700;
+        font-weight: 400;
         font-size: 24px;
       }
 
       &:before,
       &:after {
-        @include border();
+        border: var(--border-width) solid transparent;
         content: '';
         display: block;
         pointer-events: none;
       }
 
       &:before {
-        @include position((calc(var(--border-width) * -2)));
-        border-radius: 0.8em 0 0 0.8em;
+        @include position('middle');
+        border-radius: var(--radius-level-2);
       }
 
       &:after {
-        @include position((calc(var(--border-width) * -3)));
-        border-radius: 1em 0 0 1em;
+        @include position('outer');
+        border-radius: var(--radius-level-3);
       }
 
       &:hover,
       &:focus-within {
         border-color: var(--y);
 
-        &:before {
+        &::before {
           border-color: var(--m);
         }
 
-        &:after {
+        &::after {
           border-color: var(--c);
         }
       }
@@ -166,6 +172,8 @@ nav {
 aside {
   grid-column: 1;
   grid-row: 3;
+
+  margin: 0 var(--margin) var(--margin);
 }
 
 main {
@@ -179,9 +187,10 @@ main {
   padding-top: 1em;
 
   section {
-    max-width: 65ch;
+    max-width: 55ch;
     text-align: justify;
     margin: auto;
+    line-height: 1.4;
 
     h2 {
       border-bottom: var(--border-width) solid var(--k);
@@ -194,8 +203,8 @@ p:last-of-type {
 }
 
 menu {
-  --slider-size: calc(var(--base-px) * 10);
-  --diff: calc(var(--base-px) * 2);
+  --slider-size: calc(var(--base-px) * 7);
+  --diff: calc(var(--border-width) * 2);
   --toggle: calc(var(--slider-size) - var(--diff));
 
   padding: 0;
@@ -208,9 +217,26 @@ menu {
     border-radius: 100%;
     border: var(--border-width) solid transparent;
     display: inline-flex;
+    align-items: center;
 
-    span {
-      display: none;
+    > span {
+      position: absolute;
+      right: calc(var(--border-width) * 12);
+
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    &:has(input#toggle:checked) {
+      span#dark {
+        display: none;
+      }
+    }
+
+    &:has(input#toggle:not(:checked)) {
+      span#light {
+        display: none;
+      }
     }
 
     &::before,
@@ -223,11 +249,11 @@ menu {
     }
 
     &:before {
-      @include position((calc(var(--border-width) * -2)));
+      @include position('middle');
     }
 
     &:after {
-      @include position((calc(var(--border-width) * -3)));
+      @include position('outer');
     }
 
     &:hover,
@@ -278,14 +304,13 @@ menu {
       right: var(--diff);
 
       box-shadow: none;
-      transition: 0.2s;
+      transition: 0.4s;
     }
 
     &:checked:after {
       background-color: var(--bg);
-      box-shadow: inset 1em -1px 0 0 var(--k);
-      right: calc((var(--slider-size) - var(--toggle)));
-      transform: right;
+      box-shadow: inset 0.75em 0 0 0 var(--k);
+      transform: box-shadow;
     }
   }
 }
