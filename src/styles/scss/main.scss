@@ -23,6 +23,12 @@ body {
   background-color: var(--bg);
 
   display: grid;
+  grid-template-areas:
+    'header hr2 hr3 hr4 nav'
+    'header hr2 hr3 hr4 main'
+    'custom hr2 hr3 hr4 main'
+    'footer hr2 hr3 hr4 main';
+
   grid-template-columns:
     minmax(min-content, 30%) repeat(3, var(--base-px))
     auto;
@@ -43,8 +49,7 @@ body {
 }
 
 header {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: header;
   margin: var(--margin) var(--margin) 0;
   line-height: 1.4;
 
@@ -71,17 +76,17 @@ hr {
   margin: 0;
 
   &:nth-of-type(2) {
-    grid-column: 2;
+    grid-area: hr2;
     background-color: var(--y);
   }
 
   &:nth-of-type(3) {
-    grid-column: 3;
+    grid-area: hr3;
     background-color: var(--m);
   }
 
   &:nth-of-type(4) {
-    grid-column: 4;
+    grid-area: hr4;
     background-color: var(--c);
   }
 }
@@ -97,9 +102,10 @@ hr {
 }
 
 nav {
-  grid-column: 1;
-  grid-row: 2;
-  margin: 0 var(--margin);
+  grid-area: nav;
+  margin: auto;
+  padding-top: calc(var(--border-width) * 3);
+  width: 56ch;
 
   ul {
     display: flex;
@@ -170,21 +176,15 @@ nav {
 }
 
 aside {
-  grid-column: 1;
-  grid-row: 3;
-
+  grid-area: custom;
   margin: 0 var(--margin) var(--margin);
 }
 
 main {
-  grid-column: 5;
-  grid-row: 1 / -1;
+  grid-area: main;
   box-sizing: border-box;
-  height: 100vh;
   overflow: scroll;
   position: relative;
-  margin: 0 2em;
-  padding-top: 1em;
 
   section {
     max-width: 55ch;
@@ -193,7 +193,11 @@ main {
     line-height: 1.4;
 
     h2 {
+      position: sticky;
+      top: 0;
+      background-color: var(--bg);
       border-bottom: var(--border-width) solid var(--k);
+      margin-top: 0;
     }
   }
 }
