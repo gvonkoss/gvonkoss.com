@@ -1,0 +1,74 @@
+@use './mixins';
+
+nav {
+  grid-area: nav;
+  margin: auto;
+  padding-top: calc(var(--border-width) * 3);
+  width: 56ch;
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+
+    gap: var(--border-width);
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    li {
+      --radius-level-0: 0.3em;
+      --radius-level-1: calc(var(--radius-level-0) + var(--border-width) + 3px);
+      --radius-level-2: calc(var(--radius-level-1) + var(--border-width));
+      --radius-level-3: calc(var(--radius-level-2) + var(--border-width));
+
+      border: var(--border-width) solid transparent;
+      border-radius: var(--radius-level-1);
+      position: relative;
+      cursor: pointer;
+      margin: 0;
+      text-align: right;
+
+      a {
+        display: block;
+        padding: var(--base-px) calc(var(--base-px) * 2);
+        border: var(--border-width) solid var(--text);
+        border-radius: var(--radius-level-0);
+        background-color: var(--background);
+        font-weight: 400;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        pointer-events: none;
+        border: var(--border-width) solid transparent;
+      }
+
+      &:before {
+        @include mixins.position('middle');
+        border-radius: var(--radius-level-2);
+      }
+
+      &:after {
+        @include mixins.position('outer');
+        border-radius: var(--radius-level-3);
+      }
+
+      &:hover,
+      &:focus-within {
+        border-color: var(--y);
+
+        &::before {
+          border-color: var(--m);
+        }
+
+        &::after {
+          border-color: var(--c);
+        }
+      }
+    }
+  }
+}
