@@ -1,37 +1,29 @@
-@use './media-queries';
+// @use './media-queries';
 
 .grid {
   display: grid;
   grid-template-areas:
-    '. me controls .'
-    '. sidebar sidebar .'
-    '. heading heading .'
-    '. content content .'
-    '. . . .';
-  grid-template-columns: 1fr repeat(2, auto) 1fr;
-  grid-template-rows: 10rem repeat(3, auto)1fr;
-  grid-gap: 1.5rem;
+    'header hr2 hr3 hr4 nav'
+    'header hr2 hr3 hr4 main'
+    'custom hr2 hr3 hr4 main'
+    'footer hr2 hr3 hr4 main';
 
-  margin: 1rem 0;
-  min-height: 100vh;
-  background: var(--background);
+  grid-template-columns:
+    minmax(min-content, 30%) repeat(3, var(--base-px))
+    auto;
+  grid-template-rows: repeat(3, auto);
+  row-gap: var(--margin);
+
+  margin: 0;
+  height: 100vh;
+
   box-sizing: border-box;
 
-  @media screen and (prefers-reduced-motion) {
-    background: none;
+  // @media screen and (prefers-reduced-motion) {
+  //   background: none;
 
-    .background {
-      display: none;
-    }
-  }
-
-  @include media-queries.fromM() {
-    grid-template-areas:
-      '. me controls .'
-      '. me heading .'
-      '. sidebar content .'
-      '. . . .';
-    grid-template-columns: 1fr 20% minmax(auto, 65ch) 1fr;
-    grid-template-rows: 10rem repeat(2, auto) 1fr;
-  }
+  //   .background {
+  //     display: none;
+  //   }
+  // }
 }
